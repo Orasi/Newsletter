@@ -1,0 +1,12 @@
+%section.grid-wrap
+  %ul.grid.swipe-right#grid
+    - 30.times do |num|
+      %li
+        %a{href: '#'}
+          %img{src: "http://placekitten.com/314/#{SecureRandom.random_number(300)+150}"}
+            %h3= "Cat #{num+1}"
+      - if num % 15 == 0
+        %li.title-box
+          %h2
+            Website by
+            %a{href: 'http://www.orasi.com'} Lewis Gordon
