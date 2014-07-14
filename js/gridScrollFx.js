@@ -86,12 +86,15 @@
 	}
 
 	GridItem.prototype.addCurtain = function() {
-		if( !this.image ) return;
 		this.curtain = document.createElement( 'div' );
 		this.curtain.className = 'curtain';
+        if( !this.image ) {
+            this.el.appendChild( this.curtain );
+            return;
+        }
 		var rgb = new ColorFinder( function favorHue(r,g,b) {
 			// exclude white
-			//if (r>245 && g>245 && b>245) return 0;
+			if (r>245 && g>245 && b>245) return 0;
 			return (Math.abs(r-g)*Math.abs(r-g) + Math.abs(r-b)*Math.abs(r-b) + Math.abs(g-b)*Math.abs(g-b))/65535*50+1;
 		} ).getMostProminentColor( this.image );
 		if( rgb.r && rgb.g && rgb.b ) {

@@ -245,12 +245,13 @@
 
 /* Hide image and title and show at half time */
 .js .grid li img,
-.js .grid li h3 {
+.js .grid li h3,
+.js .grid li h2{
 	visibility: hidden;
 }
 
 .grid li.animate img,
-.grid li.animate h3 {
+.grid li.animate h3{
 	-webkit-animation: showMe 1.5s step-end forwards;
 	animation: showMe 1.5s step-end forwards;
 }
@@ -266,6 +267,7 @@
 }
 
 .grid li.shown img,
-.grid li.shown h3 {
+.grid li.shown h3,
+.grid li.shown h2{
 	visibility: visible;
 }
