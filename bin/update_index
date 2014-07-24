@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'bundler/setup'
 require 'tilt'
 require 'haml'
 require 'securerandom'
 require 'active_support/file_update_checker'
 
 def render(file)
-  Tilt.new(Dir["../partials/_#{file}.*"].first).render
+  Tilt.new(Dir[File.expand_path("../../partials/_#{file}.*",__FILE__)].first).render
 end
 
 write_file = proc do

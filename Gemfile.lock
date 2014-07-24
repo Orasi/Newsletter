@@ -12,6 +12,7 @@ GEM
     i18n (0.6.11)
     minitest (4.7.5)
     multi_json (1.10.1)
+    sass (3.2.13)
     thread_safe (0.3.4)
     tilt (1.4.1)
     tzinfo (0.3.39)
@@ -22,4 +23,5 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   haml
+  sass
   tilt

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rural Reader</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <style>
+        body{
+            margin: 0px;
+        }
+        video{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<video id="video1" autoplay>
+    <source src="claymation.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<script>
+    myVid=document.getElementsByTagName('video')[0]
+    myVid.addEventListener("ended", function(){
+        window.location.replace('index.html');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+-# coding: UTF-8
+!!! 5
+%html
+  %head
+    %link{rel:'stylesheet', href: 'css/normalize.css', type: 'text/css'}
+    :sass
+      .author-section
+        display: inline-block
+        .avatar
+          display: table-cell
+          width: 55px
+          height: 55px
+          padding-right: 20px
+          img
+            border-radius: 50%
+        .author-name
+          display: table-cell
+          vertical-align: middle
+      .container
+        margin: 0 auto
+        max-width: 768px
+        text-align: center
+      .article-text
+        text-align: justify
+        text-indent: 20px
+
+  %body.container
+    %article#lew-ty
+      %section.article-header
+        %h1 A Big "Thank You!"
+        .author-section
+          .avatar
+            %img{src: "http://placehold.it/55x55"}
+          .author-name
+            %h4
+              by
+              %span#author-name Alissa Taylor
+              and
+              %span#author-name John Martin
+      %p.article-text=                                              |
+        "The Newsletter Committee would like to give "              |
+        "tremendous thanks to the relentless hard work "            |
+        "and dedication put forth by Lewis Gordon, resulting "      |
+        "in the new look and launch of The Rural Reader website. "  |
+        "Lewis volunteered to join the newsletter team's constant " |
+        "effort to deliver new and exciting content from Rural "    |
+        "Testing. Lewis is not only the acting site admin for The " |
+        "Rural Reader, he has also helped us with brainstorming, "  |
+        "layout design, and content delivery; please see his Code " |
+        "Challenge article featured in this edition."               |
