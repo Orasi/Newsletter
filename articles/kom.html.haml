@@ -1,0 +1,48 @@
+-# coding: UTF-8
+!!! 5
+%html
+  %head
+    %link{rel:'stylesheet', href: '../css/article.css', type: 'text/css'}
+    %link{rel:'stylesheet', href: '../css/normalize.css', type: 'text/css'}
+    %link{rel: 'stylesheet', href:'//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'}
+    %script{src:'//code.jquery.com/jquery-1.11.0.min.js'}
+    %script{src:'//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'}
+    %script{src:'../js/imagesLoaded.pkgd.min.js'}
+    %script{src:'../js/masonry.pkgd.min.js'}
+  %body.container
+    %article#lew-ty
+      %section.article-header
+        %h1 Orasi's Annual Kick Off Meeting
+        .author-section
+          .avatar
+            %img{src: "../img/avatars/alissa_taylor.jpg"}
+          .author-name
+            %h4
+              by
+              %span#author-name Alissa Taylor
+      %p.article-text= "Orasi begins each new fiscal year with a (nothing short of entertaining) Kick Off Meeting that " |
+         "allows us to get together as a company and meet and greet all of our co-workers, including those " |
+         "we do not see on a daily basis. This year was no different. Our meeting took place in May at the " |
+         "Renaissance Atlanta Waverly Hotel and Convention Center in Atlanta, Georgia. Commencing - on Friday " |
+         "afternoon with lunch and followed by a variety of departmental breakout sessions, after which the fun " |
+         "ensued. Orasi treated its employees to a delicious dinner buffet accompanied by a range of amusing " |
+         'entertainment. We were "serenaded" by co-workers singing their favorite karaoke tunes, heard the ' |
+         "comics styling's of stand-up comedian (and former Orasi employee) Ed Wiley, and, as always, witnessed " |
+         "some interesting dance moves! " |
+         "As quickly as it began on Friday, the Kick Off meeting concluded on Saturday with the company " |
+         "wide meeting hosted by our CEO, Nick Kavadellas. As always, Nick shared with us how Orasi fared the " |
+         "previous fiscal year as well as provided details of where our great company is headed for Fiscal Year " |
+         "2015. In the end, memories were made and fun was had by all. We look forward to enjoying whatever " |
+         "Orasi has up its sleeve for us next year. " |
+      .images.image-grid
+        - 12.times do
+          %img{src: "http://placehold.it/250x#{150+SecureRandom.random_number(100)}/#{"%06x" % (rand * 0xffffff)}"}
+      :coffee
+        $container = $('.images')
+        $container.imagesLoaded ->
+          $container.masonry({
+            isFitWidth: true,
+            itemSelector: 'img'
+          })
+
+

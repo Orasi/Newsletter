@@ -1,0 +1,30 @@
+.image-grid {
+  border-top: 1px solid black;
+  padding-top: 50px;
+  margin-top: 50px; }
+  .image-grid img {
+    margin: 5px;
+    width: 236px; }
+
+.author-section {
+  display: inline-block; }
+  .author-section .avatar {
+    display: table-cell;
+    width: 55px;
+    height: 55px;
+    padding-right: 20px; }
+    .author-section .avatar img {
+      border-radius: 50%; }
+  .author-section .author-name {
+    display: table-cell;
+    vertical-align: middle; }
+
+.container {
+  margin: 0 auto;
+  max-width: 768px;
+  text-align: center; }
+
+.article-text {
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 22px; }
