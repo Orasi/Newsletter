@@ -1,2 +1,2 @@
 -locals = {author: 'Danny Mattice',title: "Perlers and the Pixelated Art",folder_name: 'perler'}
-=Haml::Engine.new(File.read('template.html.haml')).render(Object.new,locals)
+=Haml::Engine.new(File.read(File.expand_path('../template.html.haml', __FILE__))).render(Object.new,locals)

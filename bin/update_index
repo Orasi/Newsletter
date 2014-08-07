@@ -17,6 +17,7 @@ write_file = proc do
   end
 end
 
+=begin
 fuc = ActiveSupport::FileUpdateChecker.new(Dir[File.expand_path('../../index.html.erb', __FILE__)],{'../partials' => ['html','erb','haml'],'..' => ['erb']},&write_file)
 fuc.execute
 puts 'Starting app...'
@@ -27,3 +28,4 @@ loop do
     puts error.message
   end
 end
+=end
