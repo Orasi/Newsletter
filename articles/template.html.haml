@@ -1,0 +1,32 @@
+-# coding: UTF-8
+!!! 5
+%html
+  %head
+    %link{rel:'stylesheet', href: '../css/article.css', type: 'text/css'}
+    %link{rel:'stylesheet', href: '../css/normalize.css', type: 'text/css'}
+    %link{rel: 'stylesheet', href:'//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'}
+    %script{src:'//code.jquery.com/jquery-1.11.0.min.js'}
+    %script{src:'//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'}
+    %script{src:'../js/imagesLoaded.pkgd.min.js'}
+    %script{src:'../js/masonry.pkgd.min.js'}
+  %body.container
+    %article
+      %section.article-header
+        %h1= title
+        .author-section
+          .avatar
+            %img{src: "../img/avatars/#{author.downcase.tr_s(' ','_')}.jpg"}
+          .author-name
+            %h4
+              by
+              %span#author-name= author
+        =Haml::Engine.new(File.read(File.expand_path("../content/_#{folder_name}_article.html.haml", __FILE__))).render
+      - images = (Dir["../img/#{folder_name}/*.jpg"] - ["../img/#{folder_name}/opening.jpg"])
+      - if images.size > 0
+        .image-grid
+          - images.each do |img|
+            %img{src: img}
+      %script{src:'../js/article.js'}
+
+
+

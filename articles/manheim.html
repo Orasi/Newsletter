@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='css/normalize.css' rel='stylesheet' type='text/css'>
-    <style>
-      .author-section {
-        display: inline-block; }
-        .author-section .avatar {
-          display: table-cell;
-          width: 55px;
-          height: 55px;
-          padding-right: 20px; }
-          .author-section .avatar img {
-            border-radius: 50%; }
-        .author-section .author-name {
-          display: table-cell;
-          vertical-align: middle; }
-      
-      .container {
-        margin: 0 auto;
-        max-width: 768px;
-        text-align: center; }
-      
-      .article-text {
-        text-align: justify;
-        text-indent: 20px; }
-    </style>
+    <link href='../css/article.css' rel='stylesheet' type='text/css'>
+    <link href='../css/normalize.css' rel='stylesheet' type='text/css'>
+    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'>
+    <script src='//code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='../js/imagesLoaded.pkgd.min.js'></script>
+    <script src='../js/masonry.pkgd.min.js'></script>
   </head>
   <body class='container'>
-    <article id='lew-ty'>
+    <article>
       <section class='article-header'>
         <h1>Project Spotlight: Manheim</h1>
         <div class='author-section'>
           <div class='avatar'>
-            <img src='http://placehold.it/55x55'>
+            <img src='../img/avatars/andrew_williams.jpg'>
           </div>
           <div class='author-name'>
             <h4>
               by
-              <span id='author-name'>Andy Williams</span>
+              <span id='author-name'>Andrew Williams</span>
             </h4>
           </div>
         </div>
+        <p class='article-text'>
+          Manheim is a wholesale auction operation and is Orasi's oldest client partner, dating back to May 2002.
+          Currently Orasi has 31 consultants (including 20 Full Time Employees) working on Manheim projects, and
+          has had up to 50 consultants on the account in the past. Orasi employees are working on 19 different projects.
+          Darren Sears, who is leading the efforts at Manheim, elaborated on some of them.
+          <strong>
+            "The projects are a mix of both waterfall and agile methodologies, ranging from web apps, web services, AS/400, ETL/data warehouse,
+            Oracle ERP and Oracle OBIEE reporting technologies.  In 2014 we've implemented and provided professional
+            services for TurnKey, Grid Tools and ALM 11 to 11.52 upgrade and training services."
+          </strong>
+        </p>
+        <p class='article-text'>
+          I had a chance to speak more in depth with one of our employees, Lewis Gordon, about his Manheim project,
+          "Multi-Platform Selling". This is a data mapping project which entails inbound/outbound communications and
+          includes several platforms. This has encompassed challenges to understanding the scope of other projects
+          and their inner workings. Manheim is implementing Agile Testing Technologies into their projects using the
+          testing tool "Mingle". Future automation projects will also be implementing other tools, specifically Ruby
+          and Cucumber.   As always, Orasi will continue to strive for excellent customer service and maintain a strong
+          partnership with our oldest client.
+        </p>
       </section>
-      <p class='article-text'>Manheim is a wholesale auction operation and is Orasi's oldest client partner, dating back to May 2002. Currently Orasi has 31 consultants (including 20 Full Time Employees) working on Manheim projects, and has had up to 50 consultants on the account in the past. Orasi employees are working on 19 different projects. Darren Sears, who is leading the efforts at Manheim, elaborated on some of them. "The projects are a mix of both waterfall and agile methodologies, ranging from web apps, web services, AS/400, ETL/data warehouse, Oracle ERP and Oracle OBIEE reporting technologies. In 2014 we've implemented and provided professional services for TurnKey, Grid Tools and ALM 11 to 11.52 upgrade and training services." I had a chance to speak more in depth with one of our employees, Lewis Gordon, about his Manheim project, "Multi-Platform Selling". This is a data mapping project which entails inbound/ outbound communications and includes several platforms. This has encompassed challenges to understanding the scope of other projects and their inner workings. Manheim is implementing Agile Testing Technologies into their projects using the testing tool "Mingle". Future automation projects will also be implementing other tools, specifically Ruby and Cucumber. As always, Orasi will continue to strive for excellent customer service and maintain a strong partnership with our oldest client.</p>
+      <script src='../js/article.js'></script>
     </article>
   </body>
 </html>
