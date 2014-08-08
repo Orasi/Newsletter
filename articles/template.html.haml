@@ -26,15 +26,16 @@
               %h4
                 by
                 %span#author-name= author
+      %section.article-content
         =Haml::Engine.new(File.read(File.expand_path("../articles/content/_#{folder_name}_article.html.haml", __FILE__))).render
-      - images = (Dir["img/#{folder_name}/*.jpg"] - ["img/#{folder_name}/opening.jpg"])
-      - if images.size > 0 && !defined?(no_gallery)
-        .image-grid.grid-section
-          - images.each do |img|
-            %img{src: "../#{img}"}
-      %script{src:'../js/article.js'}
-      %a{href: '../index.html'}
-        Back to home
+        - images = (Dir["img/#{folder_name}/*.jpg"] - ["img/#{folder_name}/opening.jpg"])
+        - if images.size > 0 && !defined?(no_gallery)
+          .image-grid.grid-section
+            - images.each do |img|
+              %img{src: "../#{img}"}
+        %script{src:'../js/article.js'}
+        %a{href: '../index.html'}
+          Back to home
 
 
 
