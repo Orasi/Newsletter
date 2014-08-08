@@ -4,3 +4,5 @@ $container.imagesLoaded ->
     isFitWidth: true,
     itemSelector: 'img'
   })
+$(document).ready ->
+  $('a[data-toggle=tooltip]').tooltip()

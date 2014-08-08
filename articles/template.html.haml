@@ -1,8 +1,6 @@
 -# coding: UTF-8
 -require 'yaml'
 -config = YAML.load_file(File.expand_path('../articles/articles.yml', __FILE__))
--previous_folder = config.select{|key,value| value['next_article'] == folder}.first.last['folder']
--next_folder = config[folder]['next_article']
 !!! 5
 %html
   %head
@@ -15,10 +13,10 @@
     %script{src:'../js/imagesloaded.pkgd.min.js'}
     %script{src:'../js/masonry.pkgd.min.js'}
   %body.container
-    %a.fixed-floating-left{href: "../articles/#{config[previous_folder]['folder']}.html"}
-      To #{config[previous_folder]['title']}
-    %a.fixed-floating-right{href: "../articles/#{config[next_folder]['folder']}.html"}
-      To #{config[next_folder]['title']}
+    %a.fixed-floating-left{href: "../articles/#{config[prev_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "right", title: "To #{config[prev_article]['title']}"}
+      %span.glyphicon.glyphicon-chevron-left.next-article-chevron
+    %a.fixed-floating-right{href: "../articles/#{config[next_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "left", title: "To #{config[next_article]['title']}"}
+      %span.glyphicon.glyphicon-chevron-right.next-article-chevron
     %article
       %section.article-header
         %h1= title

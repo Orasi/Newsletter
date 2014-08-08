@@ -1,1 +1,1 @@
-(function(){var i;i=$(".image-grid"),i.imagesLoaded(function(){return i.masonry({isFitWidth:!0,itemSelector:"img"})})}).call(this);
+(function(){var t;t=$(".image-grid"),t.imagesLoaded(function(){return t.masonry({isFitWidth:!0,itemSelector:"img"})}),$(document).ready(function(){return $("a[data-toggle=tooltip]").tooltip()})}).call(this);
