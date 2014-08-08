@@ -32,6 +32,7 @@
         =Haml::Engine.new(File.read(File.expand_path("../articles/content/_#{folder}_article.html.haml", __FILE__))).render
         - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
         - if images.size > 0 && !defined?(no_gallery)
+          %hr/
           .image-grid.grid-section
             - images.each do |img|
               %img{src: "../#{img}"}

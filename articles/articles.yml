@@ -1,11 +1,3 @@
-announcements:
-  folder: announcements
-  title: Announcements
-  no_gallery: true
-birthdays:
-  folder: birthdays
-  title: Birthdays and Anniversaries
-  no_gallery: true
 charity_initiative:
   folder: charity_initiative
   title: "Greensboro Charity Initiative: Second Harvest Food Bank"
@@ -50,3 +42,19 @@ recipe:
   folder: recipe
   title: Carrot Cake
   author: Julia Walser
+announcements:
+  folder: announcements
+  title: Announcements
+  no_gallery: true
+atl_events:
+  folder: atl_events
+  title: Atlanta Events
+  no_gallery: true
+gso_events:
+  folder: gso_events
+  title: Greensboro Events
+  no_gallery: true
+birthdays:
+  folder: birthdays
+  title: Birthdays and Anniversaries
+  no_gallery: true

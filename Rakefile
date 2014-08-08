@@ -36,7 +36,7 @@ end
 
 task :articles => articles_yaml.keys.map {|article| "articles/#{article}.html"}
 
-file 'index.html' => ['index.html.erb', 'partials/_grid_layout.html.haml'] do |t|
+file 'index.html' => ['index.html.erb', 'partials/_grid_layout.html.haml', 'articles/articles.yml'] do |t|
   ruby 'bin/update_index'
 end
 
