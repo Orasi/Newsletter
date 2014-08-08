@@ -1,4 +1,8 @@
 -# coding: UTF-8
+-require 'yaml'
+-config = YAML.load_file(File.expand_path('../articles/articles.yml', __FILE__))
+-previous_folder = config.select{|key,value| value['next_article'] == folder}.first.last['folder']
+-next_folder = config[folder]['next_article']
 !!! 5
 %html
   %head
@@ -11,10 +15,10 @@
     %script{src:'../js/imagesloaded.pkgd.min.js'}
     %script{src:'../js/masonry.pkgd.min.js'}
   %body.container
-    %a.fixed-floating-left{href: 'http://www.google.com'}
-      To Previous Article
-    %a.fixed-floating-right{href: 'http://www.google.com'}
-      To Next Article
+    %a.fixed-floating-left{href: "../articles/#{config[previous_folder]['folder']}.html"}
+      To #{config[previous_folder]['title']}
+    %a.fixed-floating-right{href: "../articles/#{config[next_folder]['folder']}.html"}
+      To #{config[next_folder]['title']}
     %article
       %section.article-header
         %h1= title
@@ -27,8 +31,8 @@
                 by
                 %span#author-name= author
       %section.article-content
-        =Haml::Engine.new(File.read(File.expand_path("../articles/content/_#{folder_name}_article.html.haml", __FILE__))).render
-        - images = (Dir["img/#{folder_name}/*.jpg"] - ["img/#{folder_name}/opening.jpg"])
+        =Haml::Engine.new(File.read(File.expand_path("../articles/content/_#{folder}_article.html.haml", __FILE__))).render
+        - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
         - if images.size > 0 && !defined?(no_gallery)
           .image-grid.grid-section
             - images.each do |img|
