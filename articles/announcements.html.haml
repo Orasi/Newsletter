@@ -1,0 +1,2 @@
+-locals = {title: "Announcements",folder_name: 'announcements', no_gallery: true}
+=Haml::Engine.new(File.read(File.expand_path('../template.html.haml', __FILE__))).render(Object.new,locals)

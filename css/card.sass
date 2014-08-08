@@ -1,0 +1,38 @@
+div.card
+  background: #FFFFFF
+  box-shadow: 1px 1px 5px #888888
+  margin: 15px
+  overflow: hidden
+  text-align: justify
+
+  &:hover
+    &>.details
+      max-height: 200px
+      padding: 20px
+  
+
+  div.header-image
+    background-size: cover
+    display: table
+    width: 100%
+    height: 100px
+    text-align: center
+    span.title
+      color: blue
+      font-weight: bold
+      display: table-cell
+      vertical-align: middle
+      font-size: 3em
+      text-shadow: 2px 2px #000000
+  div.details
+    text-align: center
+    max-height: 0
+    overflow: hidden
+    padding: 0px
+    $transition_time: 0.3s
+    transition: max-height $transition_time, padding $transition_time*1.5
+    span
+      display: block
+
+    
+
