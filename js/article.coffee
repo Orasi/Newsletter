@@ -5,4 +5,4 @@ $container.imagesLoaded ->
     itemSelector: 'img'
   })
 $(document).ready ->
-  $('a[data-toggle=tooltip]').tooltip()
+  $('[data-toggle=tooltip]').tooltip()

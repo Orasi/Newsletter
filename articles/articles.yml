@@ -2,6 +2,10 @@ announcements:
   folder: announcements
   title: Announcements
   no_gallery: true
+birthdays:
+  folder: birthdays
+  title: Birthdays and Anniversaries
+  no_gallery: true
 charity_initiative:
   folder: charity_initiative
   title: "Greensboro Charity Initiative: Second Harvest Food Bank"

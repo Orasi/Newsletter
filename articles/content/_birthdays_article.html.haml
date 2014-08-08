@@ -1,0 +1,18 @@
+%h3 Birthdays
+.image-grid.avatar-section
+  %ul#birthdays
+    - Dir['img/avatars/birthdays/*.jpg'].each do |image_file|
+      - 20.times do
+        %li
+          - first_name, last_name, month, day = File.basename(image_file).split(".").first.split('_')
+          - title = "#{first_name.capitalize} #{last_name.capitalize} #{Time.new(Time.now.year,month,day).strftime('%m/%d')}"
+          %img.avatar{ src: "../#{image_file}", 'data-toggle' => 'tooltip', title: title }
+%h3 Anniversaries
+.image-grid.avatar-section
+  %ul#anniversaries
+    - Dir['img/avatars/anniversaries/*.jpg'].each do |image_file|
+      - 20.times do
+        %li
+          - first_name, last_name, year, month, day = File.basename(image_file).split(".").first.split('_')
+          - title = "#{first_name.capitalize} #{last_name.capitalize} #{Time.new(year,month,day).strftime('%D')}"
+          %img.avatar{ src: "../#{image_file}", 'data-toggle' => 'tooltip', title: title }
