@@ -3,16 +3,15 @@ Bundler.require
 require 'yaml'
 
 task :default => :build
-task :build => [:landing_page, :articles, :stylesheets, :javascripts, :images]
-
-desc 'test'
-
+task :build => [:landing_page, :articles, :stylesheets, :minify_javascripts, :images]
 
 stylesheets = Rake::FileList['css/*.sass']
-javascripts = Rake::FileList['js/*.coffee']
+javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
+javascripts.exclude('js/*.min.js')
 images = Rake::FileList['**/*.jpg']
 task :stylesheets => stylesheets.ext('css')
 task :javascripts => javascripts.ext('js')
+task :minify_javascripts => javascripts.ext('min')
 task :landing_page => 'index.html'
 
 task :images do
@@ -47,12 +46,19 @@ end
 rule ".js" => ".coffee" do |t|
   puts "Writing #{t.name}"
   File.open(t.name, 'w') do |f|
-    f.write Uglifier.new.compile(CoffeeScript.compile File.read(t.source))
+    f.write CoffeeScript.compile File.read(t.source)
   end
 end
 
 rule ".css" => ".sass" do |t|
   sh "sass --style compressed #{t.source} #{t.name}"
+end
+
+rule '.min' => '.js' do |t|
+  puts "Writing #{t.name}.js"
+  File.open("#{t.name}.js", 'w') do |f|
+    f.write Uglifier.new.compile(File.read(t.source))
+  end
 end
 
 task :clean do

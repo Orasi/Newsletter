@@ -1,1 +1,17 @@
-(function(){var t;t=$(".image-grid"),t.imagesLoaded(function(){return t.masonry({isFitWidth:!0,itemSelector:"img"})}),$(document).ready(function(){return $("[data-toggle=tooltip]").tooltip()})}).call(this);
+(function() {
+  var $container;
+
+  $container = $('.image-grid');
+
+  $container.imagesLoaded(function() {
+    return $container.masonry({
+      isFitWidth: true,
+      itemSelector: 'img'
+    });
+  });
+
+  $(document).ready(function() {
+    return $('[data-toggle=tooltip]').tooltip();
+  });
+
+}).call(this);
