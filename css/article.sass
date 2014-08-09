@@ -53,3 +53,8 @@ $orasi-blue: #357BB9
   border: 1px solid black
   border-radius: 10px
   margin: 20px 0
+@media print
+  #next-article-btn, #previous-article-btn, #home-link
+    visibility: hidden
+  a:after
+    content: none !important
