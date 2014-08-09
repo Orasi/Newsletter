@@ -34,6 +34,7 @@ pineapple:
   folder: pineapple
   title: Growing Your Own Slice of Paradise
   author: Zach Goins
+  no_gallery: true
 preston:
   folder: preston
   title: "Employee Spotlight: Preston Williamson"
