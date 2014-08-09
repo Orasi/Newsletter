@@ -50,7 +50,7 @@
             ga('send', 'pageview');
 
         </script>
-        <%= render 'grid_layout' %>
+        <%= Tilt.new('partials/_grid_layout.html.haml').render %>
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/imagesloaded.pkgd.min.js"></script>
         <script src="js/classie.js"></script>

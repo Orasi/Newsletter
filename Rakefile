@@ -1,10 +1,12 @@
-require 'coffee-script'
-require 'haml'
-require 'uglifier'
+require 'bundler/setup'
+Bundler.require
 require 'yaml'
 
 task :default => :build
 task :build => [:landing_page, :articles, :stylesheets, :javascripts, :images]
+
+desc 'test'
+
 
 stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee']
@@ -28,16 +30,18 @@ articles_yaml.keys.each_with_index do |article, index|
     article_locals['prev_article'] = articles_yaml.keys[index - 1]
     puts "Writing #{t.name}"
     File.open(t.name, 'w') do |file|
-      file.write Haml::Engine.new(File.read(File.expand_path('../articles/template.html.haml', __FILE__))).render(Object.new,article_locals)
+      file.write Tilt.new(File.expand_path('../articles/template.html.haml', __FILE__)).render(Object.new,article_locals)
     end
   end
 end
 
-
 task :articles => articles_yaml.keys.map {|article| "articles/#{article}.html"}
 
 file 'index.html' => ['index.html.erb', 'partials/_grid_layout.html.haml', 'articles/articles.yml'] do |t|
-  ruby 'bin/update_index'
+  puts "Writing #{t.name}"
+  File.open(t.name, 'w') do |f|
+    f.write Tilt.new('index.html.erb').render
+  end
 end
 
 rule ".js" => ".coffee" do |t|
@@ -49,5 +53,12 @@ end
 
 rule ".css" => ".sass" do |t|
   sh "sass --style compressed #{t.source} #{t.name}"
+end
+
+task :clean do
+  Dir['articles/*.html'].each do |article|
+    rm article
+  end
+  rm 'index.html'
 end
 
