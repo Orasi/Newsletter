@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:LGordon2/rural_reader_q1.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/rural-reader/rr_q1_fy15'
+set :deploy_to, '/var/www/rural-reader/2015/q1'
 
 # Default value for :scm is :git
 # set :scm, :git
