@@ -38,7 +38,6 @@ namespace :deploy do
   after :publishing, :restart do
     on roles(:all) do |host|
       within "#{deploy_to}/current/" do
-        execute :pwd
         execute :bundle, :install
         execute :bundle, :exec, :rake
       end
