@@ -12,6 +12,8 @@
     %script{src:'../js/imagesloaded.pkgd.min.js'}
     %script{src:'../js/masonry.pkgd.min.js'}
   %body.container
+    %a#home-link{href: '../index.html'}
+      %span.glyphicon.glyphicon-home
     %a.fixed-floating-left#previous-article-btn{href: "../articles/#{config[prev_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "right", title: "To #{config[prev_article]['title']}"}
       %span.glyphicon.glyphicon-chevron-left.next-article-chevron
     %a.fixed-floating-right#next-article-btn{href: "../articles/#{config[next_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "left", title: "To #{config[next_article]['title']}"}
@@ -36,8 +38,6 @@
             - images.each do |img|
               %img{src: "../#{img}"}
         %script{src:'../js/article.min.js'}
-        %a#home-link{href: '../index.html'}
-          Back to home
 
 
 
