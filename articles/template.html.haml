@@ -15,9 +15,9 @@
   %body.container
     %a#home-link{href: '../index.html'}
       %span.glyphicon.glyphicon-home
-    %a.fixed-floating-left#previous-article-btn{href: "../articles/#{config[prev_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "right", title: "To #{config[prev_article]['title']}"}
+    %a.fixed-floating-left#previous-article-btn{href: "../articles/#{prev_article}.html", "data-toggle" => "tooltip", "data-placement" => "right", title: "To #{config[prev_article]['title']}"}
       %span.glyphicon.glyphicon-chevron-left.next-article-chevron
-    %a.fixed-floating-right#next-article-btn{href: "../articles/#{config[next_article]['folder']}.html", "data-toggle" => "tooltip", "data-placement" => "left", title: "To #{config[next_article]['title']}"}
+    %a.fixed-floating-right#next-article-btn{href: "../articles/#{next_article}.html", "data-toggle" => "tooltip", "data-placement" => "left", title: "To #{config[next_article]['title']}"}
       %span.glyphicon.glyphicon-chevron-right.next-article-chevron
     %article
       %section.article-header

@@ -1,61 +1,47 @@
 charity_initiative:
-  folder: charity_initiative
   title: "Greensboro Charity Initiative: Second Harvest Food Bank"
   author: Julia Walser
   no_gallery: true
 coding_challenge:
-  folder: coding_challenge
   title: "Coding Challenge: Season Two"
   author: Lily Powell
   no_gallery: true
 consultants:
-  folder: consultants
   title: Meet the Consultants
   author: Linley Love
   no_gallery: true
-emerging_tech:
-  folder: emerging_tech
-  title: Emerging Technologies
+open_source:
+  title: Open Source Learning Initiative
   author: Jessica Marshall
   no_gallery: true
 kom:
-  folder: kom
   title: "Orasi's Annual Kick Off Meeting"
   author: Alissa Taylor
 manheim:
-  folder: manheim
   title: "Project Spotlight: Manheim"
   author: Andy Williams
 perler:
-  folder: perler
   title: Perlers and the Pixelated Art
   author: Danny Mattice
 pineapple:
-  folder: pineapple
   title: Growing Your Own Slice of Paradise
   author: Zach Goins
   no_gallery: true
 preston:
-  folder: preston
   title: "Employee Spotlight: Preston Williamson"
   author: John Martin
 recipe:
-  folder: recipe
   title: Carrot Cake
   author: Julia Walser
 announcements:
-  folder: announcements
   title: Announcements
   no_gallery: true
 atl_events:
-  folder: atl_events
   title: Atlanta Events
   no_gallery: true
 gso_events:
-  folder: gso_events
   title: Greensboro Events
   no_gallery: true
 birthdays:
-  folder: birthdays
   title: Birthdays and Anniversaries
   no_gallery: true

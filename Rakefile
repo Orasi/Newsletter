@@ -25,6 +25,7 @@ articles_yaml = YAML.load_file('articles/articles.yml')
 articles_yaml.keys.each_with_index do |article, index|
   file "articles/#{article}.html" => ["articles/content/_#{article}_article.html.haml", 'articles/template.html.haml', 'articles/articles.yml'] do |t|
     article_locals = articles_yaml[article]
+    article_locals['folder'] = article
     next_index = index == articles_yaml.keys.size - 1 ? 0 : index + 1
     article_locals['next_article'] = articles_yaml.keys[next_index]
     article_locals['prev_article'] = articles_yaml.keys[index - 1]
