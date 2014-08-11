@@ -40,6 +40,7 @@ namespace :deploy do
       within "#{deploy_to}/current/" do
         execute :bundle, 'install --deployment'
         execute :bundle, :exec, :rake
+        execute :gzip, '-r -9 css js img'
       end
     end
   end

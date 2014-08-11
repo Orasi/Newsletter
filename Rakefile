@@ -60,7 +60,7 @@ end
 rule '.min' => '.js' do |t|
   puts "Writing #{t.name}.js"
   File.open("#{t.name}.js", 'w') do |f|
-    f.write Uglifier.new.compile(File.read(t.source))
+    f.write Uglifier.new(output: {comments: :none}).compile(File.read(t.source))
   end
 end
 
