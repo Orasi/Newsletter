@@ -7,14 +7,26 @@
         Website by
         %a{href: 'http://www.github.com/LGordon2'} Lewis Gordon
     - config.each do |folder, value|
-      - if i % 7 == 0
+      - if i == 2
         %li.title-box
           %h2
             Newsletter design by
-            - if i == 7
-              %a{href: 'http://www.orasi.com/'} Alissa Taylor
-            - else
-              %a{href: 'http://www.orasi.com/'} John Martin
+            %a{href: 'mailto:alissa.taylor@orasi.com'} Alissa Taylor
+      - elsif i == 5
+        %li.title-box
+          %h2
+            Newsletter design by
+            %a{href: 'mailto:john.martin@orasi.com'} John Martin
+      - elsif i == 7
+        %li.title-box
+          %h2
+            Photography by
+            %a{href: 'mailto:adley.haywood@orasi.com'} Adley Haywood
+      - elsif i == 9
+        %li.title-box
+          %h2
+            Photography by
+            %a{href: 'mailto:spenser.chamberlin@orasi.com'} Spenser Chamberlin
       %li
         %a{href: "articles/#{folder}.html"}
           - image = File.exist?("img/#{folder}/opening.jpg") ? "img/#{folder}/opening.jpg" : "http://placehold.it/640x480.jpg/357bb9"
@@ -24,7 +36,7 @@
     %li.title-box
       %h2
         Website by
-        %a{href: 'http://www.orasi.com/'} Brandon Sims
+        %a{href: 'mailto:brandon.sims@orasi.com'} Brandon Sims
     %li
       %a{href: "http://ruraldirectory.orasi.com/prev_rural_reader/2014/q4/reader.html"}
         %img{src: "img/header-logo.png"}
