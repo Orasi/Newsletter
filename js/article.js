@@ -4,6 +4,7 @@
   $container = $('.image-grid');
 
   $container.imagesLoaded(function() {
+    $container.find('img').addClass('loaded');
     return $container.masonry({
       isFitWidth: true,
       itemSelector: 'img'

@@ -1,14 +1,23 @@
+@import "bourbon/bourbon"
 $max-width: 768px
 $orasi-blue: #357BB9
 .image-grid
+  &.avatar-section
+    margin: 20px auto
+    box-shadow: 1px 1px 5px #888888
+    padding: 10px
   margin: 0 auto
   ul
     list-style: none
     li > .tooltip
       z-index: 9999
   img
+    @include transition(opacity 0.5s ease-in)
+    opacity: 0
     margin: 5px
     width: $max-width/3 - 20
+    &.loaded
+      opacity: 1
     &.avatar
       width: 90px
       height: 90px
@@ -52,10 +61,6 @@ $orasi-blue: #357BB9
   font-size: 35px
 .glyphicon
   color: $orasi-blue
-.avatar-section
-  margin: 20px auto
-  box-shadow: 1px 1px 5px #888888
-  padding: 10px
 @media print
   #next-article-btn, #previous-article-btn, #home-link
     visibility: hidden
