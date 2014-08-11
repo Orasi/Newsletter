@@ -32,7 +32,7 @@ set :deploy_to, '/var/www/rural-reader/2015/q1'
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-set :keep_releases, 1
+set :keep_releases, 2
 
 namespace :deploy do
   after :publishing, :restart do
@@ -41,6 +41,7 @@ namespace :deploy do
         execute :bundle, 'install --deployment'
         execute :bundle, :exec, :rake
         execute :gzip, '-r -9 css js img'
+        execute :find, "-regex '.*.webm.*' | xargs gunzip"
       end
     end
   end
