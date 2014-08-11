@@ -1,6 +1,9 @@
 $container = $('.image-grid')
+$container.find('img').addClass('loading')
+$container.prepend('<div class="signal"></div>')
 $container.imagesLoaded ->
-  $container.find('img').addClass('loaded')
+  $('.image-grid .signal').remove()
+  $container.find('img').removeClass('loading').addClass('loaded')
   $container.masonry({
     isFitWidth: true,
     itemSelector: 'img'
