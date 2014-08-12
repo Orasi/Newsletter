@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'tilt'
-gem 'activesupport'
+gem 'activesupport', require: 'active_support'
 gem 'haml'
 gem 'sass'
 gem 'coffee-script'

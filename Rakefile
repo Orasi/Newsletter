@@ -3,6 +3,8 @@ require 'bundler/setup'
 Bundler.require
 require 'yaml'
 
+include ActiveSupport::Inflector
+
 task default: :build
 task build: %i(landing_page articles stylesheets minify_javascripts images)
 
