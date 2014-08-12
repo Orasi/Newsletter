@@ -8,5 +8,7 @@ $container.imagesLoaded ->
     isFitWidth: true,
     itemSelector: 'img'
   })
+$("#o").on 'click', ->
+  window.location.href = '../articles/you_found_me.html'
 $(document).ready ->
   $('[data-toggle=tooltip]').tooltip()

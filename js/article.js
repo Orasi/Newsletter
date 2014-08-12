@@ -16,6 +16,10 @@
     });
   });
 
+  $("#o").on('click', function() {
+    return window.location.href = '../articles/you_found_me.html';
+  });
+
   $(document).ready(function() {
     return $('[data-toggle=tooltip]').tooltip();
   });
