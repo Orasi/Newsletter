@@ -20,6 +20,7 @@ kom:
 manheim:
   title: "Project Spotlight: Manheim"
   author: Andy Williams
+  no_gallery: true
 perler:
   title: Perlers and the Pixelated Art
   author: Danny Mattice
@@ -45,3 +46,9 @@ gso_events:
 birthdays:
   title: Birthdays and Anniversaries
   no_gallery: true
+guess_who_riddle:
+  title: Guess Who Riddle
+guess_who:
+  title: Guess Who
+  page_name: you_found_me
+  hidden: true
