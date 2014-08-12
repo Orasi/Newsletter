@@ -31,7 +31,7 @@
                 by
                 %span#author-name= author
       %section.article-content
-        =Haml::Engine.new(File.read(File.expand_path("../../articles/content/_#{folder}_article.html.haml", __FILE__))).render
+        =Tilt.new(File.expand_path("../../articles/content/_#{folder}_article.html.haml", __FILE__)).render(Object.new, image_folder: "../img/#{folder}")
         - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
         - if images.size > 0 && !defined?(no_gallery)
           %hr/
