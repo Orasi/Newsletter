@@ -6,6 +6,9 @@ coding_challenge:
   title: "Coding Challenge: Season Two"
   author: Lily Powell
   no_gallery: true
+test:
+  title: Test Article
+  author: Jessica Marshall
 consultants:
   title: Meet the Consultants
   author: Linley Love

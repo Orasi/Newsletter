@@ -45,7 +45,12 @@
                 by
                 %span#author-name= author
       %section.article-content
-        =Tilt.new(File.expand_path("../../articles/content/_#{folder}_article.html.haml", __FILE__)).render(Object.new, image_folder: "../img/#{folder}")
+        - article_file_name = Dir["articles/content/_#{folder}_article.html*"].first
+        - if File.extname(article_file_name) == 'html'
+          = File.read(article_file_name)
+        - else
+          = Tilt.new(article_file_name).render(Object.new, image_folder: "../img/#{folder}")
+
         - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
         - if images.size > 0 && !defined?(no_gallery)
           %hr/
