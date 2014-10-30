@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'rr_q1_fy15'
-set :repo_url, 'git@github.com:ryderstorm/rural_reader_q1.git'
+set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
