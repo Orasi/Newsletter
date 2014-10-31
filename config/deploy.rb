@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/rural-reader/2015/q1'
+set :deploy_to, '/var/www/rural-reader/2015/q2'
 
 # Default value for :scm is :git
 # set :scm, :git
