@@ -1,0 +1,2197 @@
+INFO[d733faa3] Running /usr/bin/env mkdir -p /tmp/rr_q1_fy15/ on 69.61.108.36
+DEBUG[d733faa3] Command: /usr/bin/env mkdir -p /tmp/rr_q1_fy15/
+INFO[d733faa3] Finished in 1.421 seconds with exit status 0 (successful).
+DEBUGUploading /tmp/rr_q1_fy15/git-ssh.sh 0.0%
+INFOUploading /tmp/rr_q1_fy15/git-ssh.sh 100.0%
+INFO[810fee08] Running /usr/bin/env chmod +x /tmp/rr_q1_fy15/git-ssh.sh on 69.61.108.36
+DEBUG[810fee08] Command: /usr/bin/env chmod +x /tmp/rr_q1_fy15/git-ssh.sh
+INFO[810fee08] Finished in 0.078 seconds with exit status 0 (successful).
+DEBUG[337355cd] Running /usr/bin/env git ls-remote -h git@github.com:Orasi/Newsletter.git on 69.61.108.36
+DEBUG[337355cd] Command: ( GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/rr_q1_fy15/git-ssh.sh /usr/bin/env git ls-remote -h git@github.com:Orasi/Newsletter.git )
+DEBUG[337355cd] 	Error reading response length from authentication socket.
+DEBUG[337355cd] 	7b1c2007ed08a59db7befb61692d2b7b47cb305b	refs/heads/master
+DEBUG[337355cd] 	aba9de24d89f3924412334d274a42977e7e7b0f5	refs/heads/testing_deploy
+DEBUG[337355cd] 	Error reading response length from authentication socket.
+DEBUG[337355cd] Finished in 0.844 seconds with exit status 0 (successful).
+INFO[9a4a35c4] Running /usr/bin/env mkdir -pv /var/www/rural-reader/2015/q1/shared /var/www/rural-reader/2015/q1/releases on 69.61.108.36
+DEBUG[9a4a35c4] Command: /usr/bin/env mkdir -pv /var/www/rural-reader/2015/q1/shared /var/www/rural-reader/2015/q1/releases
+INFO[9a4a35c4] Finished in 0.078 seconds with exit status 0 (successful).
+DEBUG[c3ec5b96] Running /usr/bin/env [ -f /var/www/rural-reader/2015/q1/current/REVISION ] on 69.61.108.36
+DEBUG[c3ec5b96] Command: [ -f /var/www/rural-reader/2015/q1/current/REVISION ]
+DEBUG[c3ec5b96] Finished in 0.070 seconds with exit status 0 (successful).
+DEBUG[ef182b3a] Running /usr/bin/env cat /var/www/rural-reader/2015/q1/current/REVISION 2>/dev/null on 69.61.108.36
+DEBUG[ef182b3a] Command: /usr/bin/env cat /var/www/rural-reader/2015/q1/current/REVISION 2>/dev/null
+DEBUG[ef182b3a] 	39372a2
+DEBUG[ef182b3a] Finished in 0.077 seconds with exit status 0 (successful).
+DEBUG[0110c894] Running /usr/bin/env [ -f /var/www/rural-reader/2015/q1/repo/HEAD ] on 69.61.108.36
+DEBUG[0110c894] Command: [ -f /var/www/rural-reader/2015/q1/repo/HEAD ]
+DEBUG[0110c894] Finished in 0.070 seconds with exit status 0 (successful).
+INFOThe repository mirror is at /var/www/rural-reader/2015/q1/repo
+DEBUG[7773451c] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi on 69.61.108.36
+DEBUG[7773451c] Command: if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi
+DEBUG[7773451c] Finished in 0.070 seconds with exit status 0 (successful).
+INFO[e0fbb33f] Running /usr/bin/env git remote update on 69.61.108.36
+DEBUG[e0fbb33f] Command: cd /var/www/rural-reader/2015/q1/repo && ( GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/rr_q1_fy15/git-ssh.sh /usr/bin/env git remote update )
+DEBUG[e0fbb33f] 	Fetching origin
+DEBUG[e0fbb33f] 	Fetching origin
+DEBUG[e0fbb33f] 	Error reading response length from authentication socket.
+INFO[e0fbb33f] Finished in 0.723 seconds with exit status 0 (successful).
+DEBUG[83cf1a53] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi on 69.61.108.36
+DEBUG[83cf1a53] Command: if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi
+DEBUG[83cf1a53] Finished in 0.072 seconds with exit status 0 (successful).
+INFO[c3bfec51] Running /usr/bin/env mkdir -p /var/www/rural-reader/2015/q1/releases/20141030195250 on 69.61.108.36
+DEBUG[c3bfec51] Command: cd /var/www/rural-reader/2015/q1/repo && ( GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/rr_q1_fy15/git-ssh.sh /usr/bin/env mkdir -p /var/www/rural-reader/2015/q1/releases/20141030195250 )
+INFO[c3bfec51] Finished in 0.078 seconds with exit status 0 (successful).
+INFO[686cb3f6] Running /usr/bin/env git archive master | tar -x -C /var/www/rural-reader/2015/q1/releases/20141030195250 on 69.61.108.36
+DEBUG[686cb3f6] Command: cd /var/www/rural-reader/2015/q1/repo && ( GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/rr_q1_fy15/git-ssh.sh /usr/bin/env git archive master | tar -x -C /var/www/rural-reader/2015/q1/releases/20141030195250 )
+INFO[686cb3f6] Finished in 0.458 seconds with exit status 0 (successful).
+DEBUG[483fbc9c] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi on 69.61.108.36
+DEBUG[483fbc9c] Command: if test ! -d /var/www/rural-reader/2015/q1/repo; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/repo'" 1>&2; false; fi
+DEBUG[483fbc9c] Finished in 0.071 seconds with exit status 0 (successful).
+DEBUG[793b77a7] Running /usr/bin/env git rev-parse --short master on 69.61.108.36
+DEBUG[793b77a7] Command: cd /var/www/rural-reader/2015/q1/repo && ( GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/rr_q1_fy15/git-ssh.sh /usr/bin/env git rev-parse --short master )
+DEBUG[793b77a7] 	39372a2
+DEBUG[793b77a7] Finished in 0.080 seconds with exit status 0 (successful).
+DEBUG[c21164df] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/releases/20141030195250; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/releases/20141030195250'" 1>&2; false; fi on 69.61.108.36
+DEBUG[c21164df] Command: if test ! -d /var/www/rural-reader/2015/q1/releases/20141030195250; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/releases/20141030195250'" 1>&2; false; fi
+DEBUG[c21164df] Finished in 0.069 seconds with exit status 0 (successful).
+INFO[e35c59e2] Running /usr/bin/env echo "39372a2" >> REVISION on 69.61.108.36
+DEBUG[e35c59e2] Command: cd /var/www/rural-reader/2015/q1/releases/20141030195250 && /usr/bin/env echo "39372a2" >> REVISION
+INFO[e35c59e2] Finished in 0.079 seconds with exit status 0 (successful).
+INFO[ef754da8] Running /usr/bin/env rm -rf /var/www/rural-reader/2015/q1/current on 69.61.108.36
+DEBUG[ef754da8] Command: /usr/bin/env rm -rf /var/www/rural-reader/2015/q1/current
+INFO[ef754da8] Finished in 0.079 seconds with exit status 0 (successful).
+INFO[a96613b2] Running /usr/bin/env ln -s /var/www/rural-reader/2015/q1/releases/20141030195250 /var/www/rural-reader/2015/q1/current on 69.61.108.36
+DEBUG[a96613b2] Command: /usr/bin/env ln -s /var/www/rural-reader/2015/q1/releases/20141030195250 /var/www/rural-reader/2015/q1/current
+INFO[a96613b2] Finished in 0.079 seconds with exit status 0 (successful).
+DEBUG[e0dd6c42] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/current/; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/current/'" 1>&2; false; fi on 69.61.108.36
+DEBUG[e0dd6c42] Command: if test ! -d /var/www/rural-reader/2015/q1/current/; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/current/'" 1>&2; false; fi
+DEBUG[e0dd6c42] Finished in 0.070 seconds with exit status 0 (successful).
+INFO[b3705d6c] Running /usr/bin/env bundle install --deployment on 69.61.108.36
+DEBUG[b3705d6c] Command: cd /var/www/rural-reader/2015/q1/current/ && /usr/bin/env bundle install --deployment
+DEBUG[b3705d6c] 	Fetching gem metadata from https://rubygems.org/
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	.
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	Installing rake 10.3.2
+DEBUG[b3705d6c] 	Installing i18n 0.6.11
+DEBUG[b3705d6c] 	Using minitest 4.7.5
+DEBUG[b3705d6c] 	Installing multi_json 1.10.1
+DEBUG[b3705d6c] 	Installing thread_safe 0.3.4
+DEBUG[b3705d6c] 	Installing tzinfo 0.3.39
+DEBUG[b3705d6c] 	Installing activesupport 4.0.2
+DEBUG[b3705d6c] 	Installing sass 3.2.13
+DEBUG[b3705d6c] 	Installing thor 0.19.1
+DEBUG[b3705d6c] 	Installing bourbon 3.2.3
+DEBUG[b3705d6c] 	Installing colorize 0.7.3
+DEBUG[b3705d6c] 	Installing net-ssh 2.9.1
+DEBUG[b3705d6c] 	Installing net-scp 1.2.1
+DEBUG[b3705d6c] 	Installing sshkit 1.5.1
+DEBUG[b3705d6c] 	Installing capistrano 3.2.1
+DEBUG[b3705d6c] 	Installing coffee-script-source 1.6.3
+DEBUG[b3705d6c] 	Installing execjs 2.0.2
+DEBUG[b3705d6c] 	Installing coffee-script 2.2.0
+DEBUG[b3705d6c] 	Installing tilt 1.4.1
+DEBUG[b3705d6c] 	Installing haml 4.0.5
+DEBUG[b3705d6c] 	Using json 1.8.1
+DEBUG[b3705d6c] 	Installing uglifier 2.4.0
+DEBUG[b3705d6c] 	Using bundler 1.6.2
+DEBUG[b3705d6c] 	Your bundle is complete!
+DEBUG[b3705d6c] 	It was installed into ./vendor/bundle
+DEBUG[b3705d6c] 	Post-install message from capistrano:
+DEBUG[b3705d6c] 	Capistrano 3.1 has some breaking changes, like `deploy:restart` callback should be added manually to your deploy.rb. Please, check the CHANGELOG: http://goo.gl/SxB0lr
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	If you're upgrading Capistrano from 2.x, we recommend to read the upgrade guide: http://goo.gl/4536kB
+DEBUG[b3705d6c] 	Post-install message from haml:
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
+DEBUG[b3705d6c] 	your application:
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	* Support for Ruby 1.8.6 dropped
+DEBUG[b3705d6c] 	* Support for Rails 2 dropped
+DEBUG[b3705d6c] 	* Sass filter now always outputs <style> tags
+DEBUG[b3705d6c] 	* Data attributes are now hyphenated, not underscored
+DEBUG[b3705d6c] 	* html2haml utility moved to the html2haml gem
+DEBUG[b3705d6c] 	* Textile and Maruku filters moved to the haml-contrib gem
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	For more info see:
+DEBUG[b3705d6c] 	
+DEBUG[b3705d6c] 	http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
+DEBUG[b3705d6c] 	
+INFO[b3705d6c] Finished in 25.650 seconds with exit status 0 (successful).
+INFO[f2a39aab] Running /usr/bin/env bundle exec rake on 69.61.108.36
+DEBUG[f2a39aab] Command: cd /var/www/rural-reader/2015/q1/current/ && /usr/bin/env bundle exec rake
+DEBUG[f2a39aab] 	Writing index.html
+DEBUG[f2a39aab] 	Writing articles/coding_challenge.html
+DEBUG[f2a39aab] 	Writing articles/charity_initiative.html
+DEBUG[f2a39aab] 	Writing articles/consultants.html
+DEBUG[f2a39aab] 	Writing articles/open_source.html
+DEBUG[f2a39aab] 	Writing articles/kom.html
+DEBUG[f2a39aab] 	Writing articles/manheim.html
+DEBUG[f2a39aab] 	Writing articles/perler.html
+DEBUG[f2a39aab] 	Writing articles/pineapple.html
+DEBUG[f2a39aab] 	Writing articles/preston.html
+DEBUG[f2a39aab] 	Writing articles/recipe.html
+DEBUG[f2a39aab] 	Writing articles/announcements.html
+DEBUG[f2a39aab] 	Writing articles/atl_events.html
+DEBUG[f2a39aab] 	Writing articles/gso_events.html
+DEBUG[f2a39aab] 	Writing articles/birthdays.html
+DEBUG[f2a39aab] 	Writing articles/guess_who_riddle.html
+DEBUG[f2a39aab] 	Writing articles/you_found_me.html
+DEBUG[f2a39aab] 	Writing js/article.min.js
+DEBUG[f2a39aab] 	Writing js/secret.min.js
+DEBUG[f2a39aab] 	Writing js/classie.min.js
+DEBUG[f2a39aab] 	Writing js/colorfinder-1.1.min.js
+DEBUG[f2a39aab] 	Writing js/gridScrollFx.min.js
+DEBUG[f2a39aab] 	Writing js/main.min.js
+DEBUG[f2a39aab] 	Writing js/plugins.min.js
+DEBUG[f2a39aab] 	Writing js/special.min.js
+DEBUG[f2a39aab] 	Writing js/special.min.js
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/announcements/kia_jordy_wedding.jpg
+DEBUG[f2a39aab] 	Writing js/special.min.js
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/announcements/kia_jordy_wedding.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	740x493 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	34667 --> 34667 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	34667 --> 34667 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/announcements/meeks.jpg
+DEBUG[f2a39aab] 	34667 --> 34667 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/announcements/meeks.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	740x416 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	79254 --> 79254 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	79254 --> 79254 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/announcements/opening.jpg
+DEBUG[f2a39aab] 	79254 --> 79254 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/announcements/opening.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	325x487 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	56845 --> 59747 bytes (-5.11%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	56845 --> 59747 bytes (-5.11%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/atl_events/botanical_garden.jpg
+DEBUG[f2a39aab] 	56845 --> 59747 bytes (-5.11%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/atl_events/botanical_garden.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	708x249 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	73505 --> 76914 bytes (-4.64%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	73505 --> 76914 bytes (-4.64%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/atl_events/dream_cars.jpg
+DEBUG[f2a39aab] 	73505 --> 76914 bytes (-4.64%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/atl_events/dream_cars.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	708x532 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	40686 --> 41541 bytes (-2.10%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	40686 --> 41541 bytes (-2.10%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/atl_events/gwinnett.jpg
+DEBUG[f2a39aab] 	40686 --> 41541 bytes (-2.10%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/atl_events/gwinnett.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	670x350 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	122095 --> 122095 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	122095 --> 122095 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/atl_events/opening.jpg
+DEBUG[f2a39aab] 	122095 --> 122095 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/atl_events/opening.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	708x531 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	107102 --> 112988 bytes (-5.50%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	107102 --> 112988 bytes (-5.50%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/atl_events/piedmont.jpg
+DEBUG[f2a39aab] 	107102 --> 112988 bytes (-5.50%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/atl_events/piedmont.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	599x238 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	33131 --> 33131 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	33131 --> 33131 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/alissa_taylor.jpg
+DEBUG[f2a39aab] 	33131 --> 33131 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/alissa_taylor.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1702 --> 1702 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1702 --> 1702 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/andy_williams.jpg
+DEBUG[f2a39aab] 	1702 --> 1702 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/andy_williams.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/alissa_taylor_2010_06_07.jpg
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/alissa_taylor_2010_06_07.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2060 --> 2060 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2060 --> 2060 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/andy_williams_2012_05_01.jpg
+DEBUG[f2a39aab] 	2060 --> 2060 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/andy_williams_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/damien_storm_2013_05_01.jpg
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/damien_storm_2013_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2700 --> 2700 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2700 --> 2700 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/doris_johnson_2012_05_01.jpg
+DEBUG[f2a39aab] 	2700 --> 2700 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/doris_johnson_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2315 --> 2315 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2315 --> 2315 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/greg_dorman_2012_05_01.jpg
+DEBUG[f2a39aab] 	2315 --> 2315 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/greg_dorman_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1918 --> 1918 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1918 --> 1918 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/hope_isley_2010_06_07.jpg
+DEBUG[f2a39aab] 	1918 --> 1918 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/hope_isley_2010_06_07.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/jessica_marshall_2009_05_26.jpg
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/jessica_marshall_2009_05_26.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/jonathan_gordon_2013_05_01.jpg
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/jonathan_gordon_2013_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2825 --> 2825 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2825 --> 2825 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/justin_phlegar_2012_05_01.jpg
+DEBUG[f2a39aab] 	2825 --> 2825 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/justin_phlegar_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1910 --> 1910 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1910 --> 1910 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/karlston_martin_2011_05_09.jpg
+DEBUG[f2a39aab] 	1910 --> 1910 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/karlston_martin_2011_05_09.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/lateef_livers_2012_05_01.jpg
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/lateef_livers_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1671 --> 1671 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1671 --> 1671 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/leroy_davis_2012_05_01.jpg
+DEBUG[f2a39aab] 	1671 --> 1671 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/leroy_davis_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1862 --> 1862 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1862 --> 1862 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/lily_powell_2012_05_01.jpg
+DEBUG[f2a39aab] 	1862 --> 1862 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/lily_powell_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1839 --> 1839 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1839 --> 1839 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/maria_lao_2013_05_01.jpg
+DEBUG[f2a39aab] 	1839 --> 1839 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/maria_lao_2013_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1948 --> 1948 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1948 --> 1948 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/nikki_eubanks_2010_06_28.jpg
+DEBUG[f2a39aab] 	1948 --> 1948 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/nikki_eubanks_2010_06_28.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/perry_thomas_2010_06_07.jpg
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/perry_thomas_2010_06_07.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1852 --> 1852 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1852 --> 1852 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/preston_williamson_2013_05_01.jpg
+DEBUG[f2a39aab] 	1852 --> 1852 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/preston_williamson_2013_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2429 --> 2429 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2429 --> 2429 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/robert_meeks_2011_07_01.jpg
+DEBUG[f2a39aab] 	2429 --> 2429 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/robert_meeks_2011_07_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/spenser_chamberlin_2013_05_01.jpg
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/spenser_chamberlin_2013_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2648 --> 2648 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2648 --> 2648 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/anniversaries/stanley_grooms_2012_05_01.jpg
+DEBUG[f2a39aab] 	2648 --> 2648 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/anniversaries/stanley_grooms_2012_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/aaron_dodson_06_15.jpg
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/aaron_dodson_06_15.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1783 --> 1783 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1783 --> 1783 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/andy_dargatz_07_14.jpg
+DEBUG[f2a39aab] 	1783 --> 1783 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/andy_dargatz_07_14.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	120x120 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/ann_pierce_05_28.jpg
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/ann_pierce_05_28.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2342 --> 2342 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2342 --> 2342 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/brandi_ray_05_01.jpg
+DEBUG[f2a39aab] 	2342 --> 2342 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/brandi_ray_05_01.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	72x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1805 --> 1805 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1805 --> 1805 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/david_bryden_06_06.jpg
+DEBUG[f2a39aab] 	1805 --> 1805 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/david_bryden_06_06.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2348 --> 2348 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2348 --> 2348 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/eric_trout_06_23.jpg
+DEBUG[f2a39aab] 	2348 --> 2348 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/eric_trout_06_23.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1598 --> 1598 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1598 --> 1598 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/erin_dodd_05_09.jpg
+DEBUG[f2a39aab] 	1598 --> 1598 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/erin_dodd_05_09.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	120x120 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/gary_morgan_07_09.jpg
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/gary_morgan_07_09.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1679 --> 1679 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1679 --> 1679 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/joey_wysosky_06_24.jpg
+DEBUG[f2a39aab] 	1679 --> 1679 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/joey_wysosky_06_24.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	120x120 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/john_crawford_05_19.jpg
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/john_crawford_05_19.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/julie_dodd_06_05.jpg
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/julie_dodd_06_05.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1747 --> 1747 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1747 --> 1747 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/karlston_martin_05_29.jpg
+DEBUG[f2a39aab] 	1747 --> 1747 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/karlston_martin_05_29.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/maryum_lawson_05_27.jpg
+DEBUG[f2a39aab] 	1855 --> 1855 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/maryum_lawson_05_27.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2244 --> 2244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2244 --> 2244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/michelle_tolliver_06_06.jpg
+DEBUG[f2a39aab] 	2244 --> 2244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/michelle_tolliver_06_06.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	120x120 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/nikki_eubanks_06_11.jpg
+DEBUG[f2a39aab] 	4344 --> 4344 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/nikki_eubanks_06_11.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/robert_meeks_05_02.jpg
+DEBUG[f2a39aab] 	1923 --> 1923 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/robert_meeks_05_02.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/robert_straughn_05_10.jpg
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/robert_straughn_05_10.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1830 --> 1830 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1830 --> 1830 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/scott_valentine_07_25.jpg
+DEBUG[f2a39aab] 	1830 --> 1830 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/scott_valentine_07_25.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/timothy_macior_07_16.jpg
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/timothy_macior_07_16.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1893 --> 1893 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1893 --> 1893 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/timothy_ruckriegel_06_02.jpg
+DEBUG[f2a39aab] 	1893 --> 1893 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/timothy_ruckriegel_06_02.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2226 --> 2226 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2226 --> 2226 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/birthdays/virginia_vestal_07_28.jpg
+DEBUG[f2a39aab] 	2226 --> 2226 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/birthdays/virginia_vestal_07_28.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2623 --> 2623 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2623 --> 2623 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/danny_mattice.jpg
+DEBUG[f2a39aab] 	2623 --> 2623 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/danny_mattice.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2005 --> 2005 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2005 --> 2005 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/jessica_marshall.jpg
+DEBUG[f2a39aab] 	2005 --> 2005 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/jessica_marshall.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1662 --> 1662 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1662 --> 1662 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/john_martin.jpg
+DEBUG[f2a39aab] 	1662 --> 1662 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/john_martin.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/julia_walser.jpg
+DEBUG[f2a39aab] 	1971 --> 1971 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/julia_walser.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1853 --> 1853 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1853 --> 1853 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/lily_powell.jpg
+DEBUG[f2a39aab] 	1853 --> 1853 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/lily_powell.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2323 --> 2128 bytes (8.39%), optimized.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2323 --> 2128 bytes (8.39%), optimized.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/linley_love.jpg
+DEBUG[f2a39aab] 	2323 --> 2128 bytes (8.39%), optimized.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/linley_love.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2052 --> 2052 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2052 --> 2052 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/avatars/zach_goins.jpg
+DEBUG[f2a39aab] 	2052 --> 2052 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/avatars/zach_goins.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	55x55 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2154 --> 1987 bytes (7.75%), optimized.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2154 --> 1987 bytes (7.75%), optimized.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/birthdays/opening.jpg
+DEBUG[f2a39aab] 	2154 --> 1987 bytes (7.75%), optimized.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/birthdays/opening.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	325x636 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	51249 --> 51596 bytes (-0.68%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	51249 --> 51596 bytes (-0.68%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/charity_initiative/food_wars.jpg
+DEBUG[f2a39aab] 	51249 --> 51596 bytes (-0.68%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/charity_initiative/food_wars.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	738x489 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	127916 --> 127916 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	127916 --> 127916 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/charity_initiative/opening.jpg
+DEBUG[f2a39aab] 	127916 --> 127916 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/charity_initiative/opening.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	325x380 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	45824 --> 47654 bytes (-3.99%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	45824 --> 47654 bytes (-3.99%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/ahmed_syed.jpg
+DEBUG[f2a39aab] 	45824 --> 47654 bytes (-3.99%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/ahmed_syed.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1935 --> 1935 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1935 --> 1935 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/brandon_sims.jpg
+DEBUG[f2a39aab] 	1935 --> 1935 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/brandon_sims.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	870 --> 870 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	870 --> 870 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/damien_storm.jpg
+DEBUG[f2a39aab] 	870 --> 870 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/damien_storm.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2703 --> 2703 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2703 --> 2703 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/david_quach.jpg
+DEBUG[f2a39aab] 	2703 --> 2703 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/david_quach.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/erin_dodd.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/erin_dodd.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/ethan_bell.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/ethan_bell.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2323 --> 2323 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2323 --> 2323 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/gabriel_jackson.jpg
+DEBUG[f2a39aab] 	2323 --> 2323 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/gabriel_jackson.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/jessica_marshall.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/jessica_marshall.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/jock_lanier.jpg
+DEBUG[f2a39aab] 	1911 --> 1911 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/jock_lanier.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/jonathan_doll.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/jonathan_doll.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/josh_jackson.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/josh_jackson.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/joshua_lee.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/joshua_lee.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1915 --> 1915 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1915 --> 1915 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/kevin_munro.jpg
+DEBUG[f2a39aab] 	1915 --> 1915 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/kevin_munro.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/lateef_livers.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/lateef_livers.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1669 --> 1669 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1669 --> 1669 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/leon_story.jpg
+DEBUG[f2a39aab] 	1669 --> 1669 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/leon_story.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	972 --> 972 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	972 --> 972 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/marella_satish.jpg
+DEBUG[f2a39aab] 	972 --> 972 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/marella_satish.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1697 --> 1697 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1697 --> 1697 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/miles_passell.jpg
+DEBUG[f2a39aab] 	1697 --> 1697 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/miles_passell.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/ramya_rajkumar.jpg
+DEBUG[f2a39aab] 	1221 --> 1221 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/ramya_rajkumar.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1009 --> 1009 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1009 --> 1009 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/robert_meeks.jpg
+DEBUG[f2a39aab] 	1009 --> 1009 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/robert_meeks.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/santosh_chikkala.jpg
+DEBUG[f2a39aab] 	1692 --> 1692 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/santosh_chikkala.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/sarath_medisetty.jpg
+DEBUG[f2a39aab] 	1792 --> 1792 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/sarath_medisetty.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1898 --> 1898 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1898 --> 1898 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/stan_herring.jpg
+DEBUG[f2a39aab] 	1898 --> 1898 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/stan_herring.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x72 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	903 --> 903 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	903 --> 903 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/stanley_grooms.jpg
+DEBUG[f2a39aab] 	903 --> 903 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/stanley_grooms.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/travis_worth.jpg
+DEBUG[f2a39aab] 	2039 --> 2039 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/travis_worth.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1657 --> 1657 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1657 --> 1657 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/william_lacy.jpg
+DEBUG[f2a39aab] 	1657 --> 1657 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/william_lacy.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/avatars/yhung_mlo.jpg
+DEBUG[f2a39aab] 	3362 --> 3362 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/avatars/yhung_mlo.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	96x96 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/carowinds.jpg
+DEBUG[f2a39aab] 	1846 --> 1846 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/carowinds.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	250x151 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	8764 --> 8764 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	8764 --> 8764 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/ethan.jpg
+DEBUG[f2a39aab] 	8764 --> 8764 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/ethan.jpg 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	42063 --> 42063 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	42063 --> 42063 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/jock.jpg
+DEBUG[f2a39aab] 	42063 --> 42063 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	img/coding_challenge/jock.jpg 250x381 24bit JFIF 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	21666 --> 21666 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	
+DEBUG[f2a39aab] 	21666 --> 21666 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/john.jpg
+DEBUG[f2a39aab] 	img/coding_challenge/john.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/john.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/john.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/john.jpg
+DEBUG[f2a39aab] 	36335 --> 36335 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/john.jpg
+DEBUG[f2a39aab] 	36335 --> 36335 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/opening.jpg
+DEBUG[f2a39aab] 	img/coding_challenge/opening.jpg 325x521 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/opening.jpg
+DEBUG[f2a39aab] 	60291 --> 62995 bytes (-4.48%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/opening.jpg
+DEBUG[f2a39aab] 	60291 --> 62995 bytes (-4.48%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/parrot.jpg
+DEBUG[f2a39aab] 	img/coding_challenge/parrot.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/parrot.jpg
+DEBUG[f2a39aab] 	250x149 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/parrot.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/parrot.jpg
+DEBUG[f2a39aab] 	7024 --> 7024 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/parrot.jpg
+DEBUG[f2a39aab] 	7024 --> 7024 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/ps4.jpg
+DEBUG[f2a39aab] 	img/coding_challenge/ps4.jpg 250x174 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/ps4.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/ps4.jpg
+DEBUG[f2a39aab] 	5367 --> 5367 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/coding_challenge/ps4.jpg
+DEBUG[f2a39aab] 	5367 --> 5367 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/consultants/opening.jpg
+DEBUG[f2a39aab] 	img/consultants/opening.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/consultants/opening.jpg
+DEBUG[f2a39aab] 	300x531 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/consultants/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/consultants/opening.jpg
+DEBUG[f2a39aab] 	57937 --> 59885 bytes (-3.36%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/consultants/opening.jpg
+DEBUG[f2a39aab] 	57937 --> 59885 bytes (-3.36%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/central_carolina.jpg
+DEBUG[f2a39aab] 	img/gso_events/central_carolina.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/central_carolina.jpg
+DEBUG[f2a39aab] 	760x351 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/central_carolina.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/central_carolina.jpg
+DEBUG[f2a39aab] 	48367 --> 48367 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/central_carolina.jpg
+DEBUG[f2a39aab] 	48367 --> 48367 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/color_5k.jpg
+DEBUG[f2a39aab] 	img/gso_events/color_5k.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/color_5k.jpg
+DEBUG[f2a39aab] 	960x420 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/color_5k.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/color_5k.jpg
+DEBUG[f2a39aab] 	225183 --> 225183 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/color_5k.jpg
+DEBUG[f2a39aab] 	225183 --> 225183 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/opening.jpg
+DEBUG[f2a39aab] 	img/gso_events/opening.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/opening.jpg
+DEBUG[f2a39aab] 	609x284 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/opening.jpg
+DEBUG[f2a39aab] 	79391 --> 82156 bytes (-3.48%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/gso_events/opening.jpg
+DEBUG[f2a39aab] 	79391 --> 82156 bytes (-3.48%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew.jpg
+DEBUG[f2a39aab] 	img/guess_who/lew.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew.jpg
+DEBUG[f2a39aab] 	738x984 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew.jpg
+DEBUG[f2a39aab] 	142098 --> 142098 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew.jpg
+DEBUG[f2a39aab] 	142098 --> 142098 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew_2.jpg
+DEBUG[f2a39aab] 	img/guess_who/lew_2.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew_2.jpg
+DEBUG[f2a39aab] 	738x984 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew_2.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew_2.jpg
+DEBUG[f2a39aab] 	184153 --> 184153 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who/lew_2.jpg
+DEBUG[f2a39aab] 	184153 --> 184153 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who_riddle/opening.jpg
+DEBUG[f2a39aab] 	img/guess_who_riddle/opening.jpg 325x485 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who_riddle/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who_riddle/opening.jpg
+DEBUG[f2a39aab] 	41507 --> 42403 bytes (-2.16%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/guess_who_riddle/opening.jpg
+DEBUG[f2a39aab] 	41507 --> 42403 bytes (-2.16%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-1-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-1-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-1-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-1-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-1-2014.jpg
+DEBUG[f2a39aab] 	22484 --> 22484 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-1-2014.jpg
+DEBUG[f2a39aab] 	22484 --> 22484 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-10-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-10-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-10-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-10-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-10-2014.jpg
+DEBUG[f2a39aab] 	23284 --> 23284 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-10-2014.jpg
+DEBUG[f2a39aab] 	23284 --> 23284 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-11-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-11-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-11-2014.jpg
+DEBUG[f2a39aab] 	250x278 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-11-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-11-2014.jpg
+DEBUG[f2a39aab] 	36094 --> 36094 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-11-2014.jpg
+DEBUG[f2a39aab] 	36094 --> 36094 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-12-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-12-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-12-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-12-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-12-2014.jpg
+DEBUG[f2a39aab] 	29388 --> 29388 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-12-2014.jpg
+DEBUG[f2a39aab] 	29388 --> 29388 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-13-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-13-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-13-2014.jpg
+DEBUG[f2a39aab] 	250x301 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-13-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-13-2014.jpg
+DEBUG[f2a39aab] 	36804 --> 36804 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-13-2014.jpg
+DEBUG[f2a39aab] 	36804 --> 36804 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-14-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-14-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-14-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-14-2014.jpg
+DEBUG[f2a39aab] 	12322 --> 12322 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-14-2014.jpg
+DEBUG[f2a39aab] 	12322 --> 12322 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-15-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-15-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-15-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-15-2014.jpg
+DEBUG[f2a39aab] 	29853 --> 29853 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-15-2014.jpg
+DEBUG[f2a39aab] 	29853 --> 29853 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-16-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-16-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-16-2014.jpg
+DEBUG[f2a39aab] 	250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-16-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-16-2014.jpg
+DEBUG[f2a39aab] 	14545 --> 14545 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-16-2014.jpg
+DEBUG[f2a39aab] 	14545 --> 14545 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-17-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-17-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-17-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-17-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-17-2014.jpg
+DEBUG[f2a39aab] 	10726 --> 10726 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-17-2014.jpg
+DEBUG[f2a39aab] 	10726 --> 10726 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-18-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-18-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-18-2014.jpg
+DEBUG[f2a39aab] 	250x316 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-18-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-18-2014.jpg
+DEBUG[f2a39aab] 	20784 --> 20784 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-18-2014.jpg
+DEBUG[f2a39aab] 	20784 --> 20784 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-19-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-19-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-19-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-19-2014.jpg
+DEBUG[f2a39aab] 	14817 --> 14817 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-19-2014.jpg
+DEBUG[f2a39aab] 	14817 --> 14817 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-2-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-2-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-2-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-2-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-2-2014.jpg
+DEBUG[f2a39aab] 	37320 --> 37320 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-2-2014.jpg
+DEBUG[f2a39aab] 	37320 --> 37320 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-20-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-20-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-20-2014.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-20-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-20-2014.jpg
+DEBUG[f2a39aab] 	24526 --> 24526 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-20-2014.jpg
+DEBUG[f2a39aab] 	24526 --> 24526 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-21-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-21-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-21-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-21-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-21-2014.jpg
+DEBUG[f2a39aab] 	12997 --> 12997 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-21-2014.jpg
+DEBUG[f2a39aab] 	12997 --> 12997 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-22-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-22-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-22-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-22-2014.jpg
+DEBUG[f2a39aab] 	14524 --> 14524 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-22-2014.jpg
+DEBUG[f2a39aab] 	14524 --> 14524 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-23-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-23-2014.jpg 250x155 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-23-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-23-2014.jpg
+DEBUG[f2a39aab] 	32757 --> 32757 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-23-2014.jpg
+DEBUG[f2a39aab] 	32757 --> 32757 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-24-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-24-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-24-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-24-2014.jpg
+DEBUG[f2a39aab] 	31224 --> 31224 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-24-2014.jpg
+DEBUG[f2a39aab] 	31224 --> 31224 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-25-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-25-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-25-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-25-2014.jpg
+DEBUG[f2a39aab] 	14617 --> 14617 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-25-2014.jpg
+DEBUG[f2a39aab] 	14617 --> 14617 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-26-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-26-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-26-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-26-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-26-2014.jpg
+DEBUG[f2a39aab] 	13253 --> 13253 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-26-2014.jpg
+DEBUG[f2a39aab] 	13253 --> 13253 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-27-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-27-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-27-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-27-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-27-2014.jpg
+DEBUG[f2a39aab] 	26052 --> 26052 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-27-2014.jpg
+DEBUG[f2a39aab] 	26052 --> 26052 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-28-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-28-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-28-2014.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-28-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-28-2014.jpg
+DEBUG[f2a39aab] 	51298 --> 51298 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-28-2014.jpg
+DEBUG[f2a39aab] 	51298 --> 51298 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-29-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-29-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-29-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-29-2014.jpg
+DEBUG[f2a39aab] 	61001 --> 61001 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-29-2014.jpg
+DEBUG[f2a39aab] 	61001 --> 61001 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-3-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-3-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-3-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-3-2014.jpg
+DEBUG[f2a39aab] 	38118 --> 38118 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-3-2014.jpg
+DEBUG[f2a39aab] 	38118 --> 38118 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-30-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-30-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-30-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-30-2014.jpg
+DEBUG[f2a39aab] 	32479 --> 32479 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-30-2014.jpg
+DEBUG[f2a39aab] 	32479 --> 32479 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-31-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-31-2014.jpg 250x169 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-31-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-31-2014.jpg
+DEBUG[f2a39aab] 	33641 --> 33641 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-31-2014.jpg
+DEBUG[f2a39aab] 	33641 --> 33641 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-32-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-32-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-32-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-32-2014.jpg
+DEBUG[f2a39aab] 	33100 --> 33100 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-32-2014.jpg
+DEBUG[f2a39aab] 	33100 --> 33100 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-33-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-33-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-33-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-33-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-33-2014.jpg
+DEBUG[f2a39aab] 	14027 --> 14027 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-33-2014.jpg
+DEBUG[f2a39aab] 	14027 --> 14027 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-34-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-34-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-34-2014.jpg
+DEBUG[f2a39aab] 	250x241 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-34-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-34-2014.jpg
+DEBUG[f2a39aab] 	14683 --> 14683 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-34-2014.jpg
+DEBUG[f2a39aab] 	14683 --> 14683 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-35-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-35-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-35-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-35-2014.jpg
+DEBUG[f2a39aab] 	12295 --> 12295 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-35-2014.jpg
+DEBUG[f2a39aab] 	12295 --> 12295 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-36-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-36-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-36-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-36-2014.jpg
+DEBUG[f2a39aab] 	52390 --> 52390 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-36-2014.jpg
+DEBUG[f2a39aab] 	52390 --> 52390 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-37-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-37-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-37-2014.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-37-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-37-2014.jpg
+DEBUG[f2a39aab] 	43427 --> 43427 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-37-2014.jpg
+DEBUG[f2a39aab] 	43427 --> 43427 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-38-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-38-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-38-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-38-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-38-2014.jpg
+DEBUG[f2a39aab] 	21280 --> 21280 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-38-2014.jpg
+DEBUG[f2a39aab] 	21280 --> 21280 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-39-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-39-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-39-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-39-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-39-2014.jpg
+DEBUG[f2a39aab] 	29060 --> 29060 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-39-2014.jpg
+DEBUG[f2a39aab] 	29060 --> 29060 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-4-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-4-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-4-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-4-2014.jpg
+DEBUG[f2a39aab] 	33491 --> 33491 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-4-2014.jpg
+DEBUG[f2a39aab] 	33491 --> 33491 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-40-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-40-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-40-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-40-2014.jpg
+DEBUG[f2a39aab] 	21427 --> 21427 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-40-2014.jpg
+DEBUG[f2a39aab] 	21427 --> 21427 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-41-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-41-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-41-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-41-2014.jpg
+DEBUG[f2a39aab] 	26244 --> 26244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-41-2014.jpg
+DEBUG[f2a39aab] 	26244 --> 26244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-42-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-42-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-42-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-42-2014.jpg
+DEBUG[f2a39aab] 	26195 --> 26195 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-42-2014.jpg
+DEBUG[f2a39aab] 	26195 --> 26195 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-46-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-46-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-46-2014.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-46-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-46-2014.jpg
+DEBUG[f2a39aab] 	58057 --> 58057 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-46-2014.jpg
+DEBUG[f2a39aab] 	58057 --> 58057 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-47-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-47-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-47-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-47-2014.jpg
+DEBUG[f2a39aab] 	32652 --> 32652 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-47-2014.jpg
+DEBUG[f2a39aab] 	32652 --> 32652 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-48-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-48-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-48-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-48-2014.jpg
+DEBUG[f2a39aab] 	43345 --> 43345 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-48-2014.jpg
+DEBUG[f2a39aab] 	43345 --> 43345 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-5-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-5-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-5-2014.jpg
+DEBUG[f2a39aab] 	250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-5-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-5-2014.jpg
+DEBUG[f2a39aab] 	34380 --> 34380 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-5-2014.jpg
+DEBUG[f2a39aab] 	34380 --> 34380 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-50-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-50-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-50-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-50-2014.jpg
+DEBUG[f2a39aab] 	28414 --> 28414 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-50-2014.jpg
+DEBUG[f2a39aab] 	28414 --> 28414 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-52-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-52-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-52-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-52-2014.jpg
+DEBUG[f2a39aab] 	55804 --> 55804 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-52-2014.jpg
+DEBUG[f2a39aab] 	55804 --> 55804 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-53-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-53-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-53-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-53-2014.jpg
+DEBUG[f2a39aab] 	22043 --> 22043 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-53-2014.jpg
+DEBUG[f2a39aab] 	22043 --> 22043 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-54-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-54-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-54-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-54-2014.jpg
+DEBUG[f2a39aab] 	51107 --> 51107 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-54-2014.jpg
+DEBUG[f2a39aab] 	51107 --> 51107 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-55-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-55-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-55-2014.jpg
+DEBUG[f2a39aab] 	250x428 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-55-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-55-2014.jpg
+DEBUG[f2a39aab] 	51721 --> 51721 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-55-2014.jpg
+DEBUG[f2a39aab] 	51721 --> 51721 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-56-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-56-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-56-2014.jpg
+DEBUG[f2a39aab] 	250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-56-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-56-2014.jpg
+DEBUG[f2a39aab] 	52357 --> 52357 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-56-2014.jpg
+DEBUG[f2a39aab] 	52357 --> 52357 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-57-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-57-2014.jpg 250x221 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-57-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-57-2014.jpg
+DEBUG[f2a39aab] 	33059 --> 33059 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-57-2014.jpg
+DEBUG[f2a39aab] 	33059 --> 33059 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-58-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-58-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-58-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-58-2014.jpg
+DEBUG[f2a39aab] 	15196 --> 15196 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-58-2014.jpg
+DEBUG[f2a39aab] 	15196 --> 15196 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-59-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-59-2014.jpg 250x191 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-59-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-59-2014.jpg
+DEBUG[f2a39aab] 	19083 --> 19083 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-59-2014.jpg
+DEBUG[f2a39aab] 	19083 --> 19083 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-6-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-6-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-6-2014.jpg
+DEBUG[f2a39aab] 	250x178 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-6-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-6-2014.jpg
+DEBUG[f2a39aab] 	36694 --> 36694 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-6-2014.jpg
+DEBUG[f2a39aab] 	36694 --> 36694 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-60-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-60-2014.jpg 250x190 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-60-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-60-2014.jpg
+DEBUG[f2a39aab] 	13311 --> 13311 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-60-2014.jpg
+DEBUG[f2a39aab] 	13311 --> 13311 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-61-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-61-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-61-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-61-2014.jpg
+DEBUG[f2a39aab] 	15827 --> 15827 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-61-2014.jpg
+DEBUG[f2a39aab] 	15827 --> 15827 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-62-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-62-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-62-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-62-2014.jpg
+DEBUG[f2a39aab] 	26602 --> 26602 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-62-2014.jpg
+DEBUG[f2a39aab] 	26602 --> 26602 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-63-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-63-2014.jpg 250x377 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-63-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-63-2014.jpg
+DEBUG[f2a39aab] 	23706 --> 23706 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-63-2014.jpg
+DEBUG[f2a39aab] 	23706 --> 23706 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-64-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-64-2014.jpg 250x305 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-64-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-64-2014.jpg
+DEBUG[f2a39aab] 	23681 --> 23681 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-64-2014.jpg
+DEBUG[f2a39aab] 	23681 --> 23681 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-65-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-65-2014.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-65-2014.jpg
+DEBUG[f2a39aab] 	250x445 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-65-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-65-2014.jpg
+DEBUG[f2a39aab] 	29011 --> 29011 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-65-2014.jpg
+DEBUG[f2a39aab] 	29011 --> 29011 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-66-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-66-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-66-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-66-2014.jpg
+DEBUG[f2a39aab] 	13886 --> 13886 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-66-2014.jpg
+DEBUG[f2a39aab] 	13886 --> 13886 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-67-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-67-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-67-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-67-2014.jpg
+DEBUG[f2a39aab] 	14803 --> 14803 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-67-2014.jpg
+DEBUG[f2a39aab] 	14803 --> 14803 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-68-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-68-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-68-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-68-2014.jpg
+DEBUG[f2a39aab] 	16199 --> 16199 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-68-2014.jpg
+DEBUG[f2a39aab] 	16199 --> 16199 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-69-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-69-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-69-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-69-2014.jpg
+DEBUG[f2a39aab] 	18977 --> 18977 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-69-2014.jpg
+DEBUG[f2a39aab] 	18977 --> 18977 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-7-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-7-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-7-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-7-2014.jpg
+DEBUG[f2a39aab] 	34684 --> 34684 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-7-2014.jpg
+DEBUG[f2a39aab] 	34684 --> 34684 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-8-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-8-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-8-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-8-2014.jpg
+DEBUG[f2a39aab] 	36018 --> 36018 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-8-2014.jpg
+DEBUG[f2a39aab] 	36018 --> 36018 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-9-2014.jpg
+DEBUG[f2a39aab] 	img/kom/Orasi KOM 2015-9-2014.jpg 250x166 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-9-2014.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-9-2014.jpg
+DEBUG[f2a39aab] 	27286 --> 27286 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/Orasi\ KOM\ 2015-9-2014.jpg
+DEBUG[f2a39aab] 	27286 --> 27286 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/opening.jpg
+DEBUG[f2a39aab] 	img/kom/opening.jpg 308x368 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/opening.jpg
+DEBUG[f2a39aab] 	55176 --> 57296 bytes (-3.84%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/kom/opening.jpg
+DEBUG[f2a39aab] 	55176 --> 57296 bytes (-3.84%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/building.jpg
+DEBUG[f2a39aab] 	img/manheim/building.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/building.jpg
+DEBUG[f2a39aab] 	738x1312 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/building.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/building.jpg
+DEBUG[f2a39aab] 	333722 --> 343779 bytes (-3.01%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/building.jpg
+DEBUG[f2a39aab] 	333722 --> 343779 bytes (-3.01%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/opening.jpg
+DEBUG[f2a39aab] 	img/manheim/opening.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/opening.jpg
+DEBUG[f2a39aab] 	447x197 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/opening.jpg
+DEBUG[f2a39aab] 	30721 --> 31352 bytes (-2.05%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/manheim/opening.jpg
+DEBUG[f2a39aab] 	30721 --> 31352 bytes (-2.05%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/lead_pic.jpg
+DEBUG[f2a39aab] 	img/open_source/lead_pic.jpg 738x463 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/lead_pic.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/lead_pic.jpg
+DEBUG[f2a39aab] 	82740 --> 82740 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/lead_pic.jpg
+DEBUG[f2a39aab] 	82740 --> 82740 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/opening.jpg
+DEBUG[f2a39aab] 	img/open_source/opening.jpg 325x632 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/opening.jpg
+DEBUG[f2a39aab] 	60303 --> 62814 bytes (-4.16%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/open_source/opening.jpg
+DEBUG[f2a39aab] 	60303 --> 62814 bytes (-4.16%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/opening.jpg
+DEBUG[f2a39aab] 	img/perler/opening.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/opening.jpg
+DEBUG[f2a39aab] 	417x528 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/opening.jpg
+DEBUG[f2a39aab] 	83929 --> 86877 bytes (-3.51%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/opening.jpg
+DEBUG[f2a39aab] 	83929 --> 86877 bytes (-3.51%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler\ 6.jpg
+DEBUG[f2a39aab] 	img/perler/perler 6.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler\ 6.jpg
+DEBUG[f2a39aab] 	417x556 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler\ 6.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler\ 6.jpg
+DEBUG[f2a39aab] 	51290 --> 52736 bytes (-2.82%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler\ 6.jpg
+DEBUG[f2a39aab] 	51290 --> 52736 bytes (-2.82%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler2.jpg
+DEBUG[f2a39aab] 	img/perler/perler2.jpg 960x720 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler2.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler2.jpg
+DEBUG[f2a39aab] 	134696 --> 139885 bytes (-3.85%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler2.jpg
+DEBUG[f2a39aab] 	134696 --> 139885 bytes (-3.85%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler3.jpg
+DEBUG[f2a39aab] 	img/perler/perler3.jpg 720x960 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler3.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler3.jpg
+DEBUG[f2a39aab] 	57263 --> 57366 bytes (-0.18%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler3.jpg
+DEBUG[f2a39aab] 	57263 --> 57366 bytes (-0.18%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler4.jpg
+DEBUG[f2a39aab] 	img/perler/perler4.jpg 960x720 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler4.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler4.jpg
+DEBUG[f2a39aab] 	117881 --> 120920 bytes (-2.58%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler4.jpg
+DEBUG[f2a39aab] 	117881 --> 120920 bytes (-2.58%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler5.jpg
+DEBUG[f2a39aab] 	img/perler/perler5.jpg 960x771 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler5.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler5.jpg
+DEBUG[f2a39aab] 	138197 --> 144722 bytes (-4.72%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler5.jpg
+DEBUG[f2a39aab] 	138197 --> 144722 bytes (-4.72%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler7.jpg
+DEBUG[f2a39aab] 	img/perler/perler7.jpg 960x720 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler7.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler7.jpg
+DEBUG[f2a39aab] 	76450 --> 77409 bytes (-1.25%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/perler/perler7.jpg
+DEBUG[f2a39aab] 	76450 --> 77409 bytes (-1.25%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/opening.jpg
+DEBUG[f2a39aab] 	img/pineapple/opening.jpg 300x523 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/opening.jpg
+DEBUG[f2a39aab] 	51850 --> 53109 bytes (-2.43%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/opening.jpg
+DEBUG[f2a39aab] 	51850 --> 53109 bytes (-2.43%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/plant.jpg
+DEBUG[f2a39aab] 	img/pineapple/plant.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/plant.jpg
+DEBUG[f2a39aab] 	720x538 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/plant.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/plant.jpg
+DEBUG[f2a39aab] 	102895 --> 102895 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/plant.jpg
+DEBUG[f2a39aab] 	102895 --> 102895 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3a.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_3a.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3a.jpg
+DEBUG[f2a39aab] 	250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3a.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3a.jpg
+DEBUG[f2a39aab] 	5932 --> 5932 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3a.jpg
+DEBUG[f2a39aab] 	5932 --> 5932 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3b.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_3b.jpg 250x443 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3b.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3b.jpg
+DEBUG[f2a39aab] 	26345 --> 26345 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3b.jpg
+DEBUG[f2a39aab] 	26345 --> 26345 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3c.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_3c.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3c.jpg
+DEBUG[f2a39aab] 	250x443 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3c.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3c.jpg
+DEBUG[f2a39aab] 	29766 --> 29766 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_3c.jpg
+DEBUG[f2a39aab] 	29766 --> 29766 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4a.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_4a.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4a.jpg
+DEBUG[f2a39aab] 	250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4a.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4a.jpg
+DEBUG[f2a39aab] 	12054 --> 12054 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4a.jpg
+DEBUG[f2a39aab] 	12054 --> 12054 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4b.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_4b.jpg 250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4b.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4b.jpg
+DEBUG[f2a39aab] 	13381 --> 13381 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4b.jpg
+DEBUG[f2a39aab] 	13381 --> 13381 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4c.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_4c.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4c.jpg
+DEBUG[f2a39aab] 	250x443 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4c.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4c.jpg
+DEBUG[f2a39aab] 	30233 --> 30233 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_4c.jpg
+DEBUG[f2a39aab] 	30233 --> 30233 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7a.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7a.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7a.jpg
+DEBUG[f2a39aab] 	250x333 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7a.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7a.jpg
+DEBUG[f2a39aab] 	11244 --> 11244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7a.jpg
+DEBUG[f2a39aab] 	11244 --> 11244 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7b.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7b.jpg 750x569 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7b.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7b.jpg
+DEBUG[f2a39aab] 	52543 --> 52543 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7b.jpg
+DEBUG[f2a39aab] 	52543 --> 52543 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7c.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7c.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7c.jpg
+DEBUG[f2a39aab] 	250x333 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7c.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7c.jpg
+DEBUG[f2a39aab] 	20424 --> 20424 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7c.jpg
+DEBUG[f2a39aab] 	20424 --> 20424 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7d.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7d.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7d.jpg
+DEBUG[f2a39aab] 	250x333 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7d.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7d.jpg
+DEBUG[f2a39aab] 	17471 --> 17471 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7d.jpg
+DEBUG[f2a39aab] 	17471 --> 17471 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7e.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7e.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7e.jpg
+DEBUG[f2a39aab] 	250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7e.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7e.jpg
+DEBUG[f2a39aab] 	11998 --> 11998 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7e.jpg
+DEBUG[f2a39aab] 	11998 --> 11998 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7f.jpg
+DEBUG[f2a39aab] 	img/pineapple/step_7f.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7f.jpg
+DEBUG[f2a39aab] 	250x141 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7f.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7f.jpg
+DEBUG[f2a39aab] 	14091 --> 14091 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/pineapple/step_7f.jpg
+DEBUG[f2a39aab] 	14091 --> 14091 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston\ -\ Dog.jpg
+DEBUG[f2a39aab] 	img/preston/Preston - Dog.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston\ -\ Dog.jpg
+DEBUG[f2a39aab] 	720x720 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston\ -\ Dog.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston\ -\ Dog.jpg
+DEBUG[f2a39aab] 	38116 --> 37629 bytes (1.28%), optimized.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston\ -\ Dog.jpg
+DEBUG[f2a39aab] 	38116 --> 37629 bytes (1.28%), optimized.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston.jpg
+DEBUG[f2a39aab] 	img/preston/Preston.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston.jpg
+DEBUG[f2a39aab] 	640x640 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston.jpg
+DEBUG[f2a39aab] 	65462 --> 67441 bytes (-3.02%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/Preston.jpg
+DEBUG[f2a39aab] 	65462 --> 67441 bytes (-3.02%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/article_images/preston2.jpg
+DEBUG[f2a39aab] 	img/preston/article_images/preston2.jpg 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/article_images/preston2.jpg
+DEBUG[f2a39aab] 	516x960 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/article_images/preston2.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/article_images/preston2.jpg
+DEBUG[f2a39aab] 	57880 --> 58859 bytes (-1.69%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/article_images/preston2.jpg
+DEBUG[f2a39aab] 	57880 --> 58859 bytes (-1.69%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/opening.jpg
+DEBUG[f2a39aab] 	img/preston/opening.jpg 405x471 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/opening.jpg
+DEBUG[f2a39aab] 	38811 --> 39290 bytes (-1.23%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/preston/opening.jpg
+DEBUG[f2a39aab] 	38811 --> 39290 bytes (-1.23%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/recipe/opening.jpg
+DEBUG[f2a39aab] 	img/recipe/opening.jpg 296x297 24bit JFIF 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/recipe/opening.jpg
+DEBUG[f2a39aab] 	 [OK] 
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/recipe/opening.jpg
+DEBUG[f2a39aab] 	19514 --> 19514 bytes (0.00%), skipped.
+DEBUG[f2a39aab] 	jpegoptim --strip-all --quiet img/recipe/opening.jpg
+INFO[f2a39aab] Finished in 7.049 seconds with exit status 0 (successful).
+DEBUG[45070d89] Running /usr/bin/env ls -x /var/www/rural-reader/2015/q1/releases on 69.61.108.36
+DEBUG[45070d89] Command: /usr/bin/env ls -x /var/www/rural-reader/2015/q1/releases
+DEBUG[45070d89] 	20141030172947	20141030193257	20141030195250
+DEBUG[45070d89] Finished in 0.079 seconds with exit status 0 (successful).
+INFOKeeping 2 of 3 deployed releases on 69.61.108.36
+INFO[f0fb5e7e] Running /usr/bin/env rm -rf /var/www/rural-reader/2015/q1/releases/20141030172947 on 69.61.108.36
+DEBUG[f0fb5e7e] Command: /usr/bin/env rm -rf /var/www/rural-reader/2015/q1/releases/20141030172947
+INFO[f0fb5e7e] Finished in 0.200 seconds with exit status 0 (successful).
+DEBUG[0008780c] Running /usr/bin/env if test ! -d /var/www/rural-reader/2015/q1/releases; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/releases'" 1>&2; false; fi on 69.61.108.36
+DEBUG[0008780c] Command: if test ! -d /var/www/rural-reader/2015/q1/releases; then echo "Directory does not exist '/var/www/rural-reader/2015/q1/releases'" 1>&2; false; fi
+DEBUG[0008780c] Finished in 0.069 seconds with exit status 0 (successful).
+INFO[e7f75ef8] Running /usr/bin/env echo "Branch master (at 39372a2) deployed as release 20141030195250 by ubuntu" >> /var/www/rural-reader/2015/q1/revisions.log on 69.61.108.36
+DEBUG[e7f75ef8] Command: echo "Branch master (at 39372a2) deployed as release 20141030195250 by ubuntu" >> /var/www/rural-reader/2015/q1/revisions.log
+INFO[e7f75ef8] Finished in 0.069 seconds with exit status 0 (successful).
