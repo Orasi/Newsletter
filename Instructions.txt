@@ -1,0 +1,32 @@
+Newsletter goes out on the 11/14/14
+Build out documentation as I learn it
+wishlist:
+    gallery for pictures that allows people to zoom/browse
+    claymation thing with the logo is too slow
+
+Get help from Jock, he might know more about front end stuff
+figure out why Alissa isn;t geting merge request emails
+Notes from Meeting with Lewis:use 'rake' to create the website from the contents 
+test it locally to verify it works, may have to run rake multiple times
+	use 'bundle exec cap production deploy' to push the generated files to the server
+	verify the live site looks good
+	live website files are accessible in /vars/www/rural-reader/q1/current (this is controlled by the :deploy_to variable in the deploy.rb)
+	each article should have a haml file with the article contents in articles/content
+	articles/articles.yml controls the order of the articles and what is visible
+	getting an issue when deploying about not being able to delete items in one of the release folders
+	need to show this to Lew and get permissions fixed before he heads out
+ToDo:
+	get Lew to fix permissions for deploy issue - done
+	Ask Lew what tells the webserver to pull the files from var/www/rural-reader/2015/q1/current and how to change that to q2
+		- has to do with symlinks, reference email from Lew
+	figure out how to generate files for q2 with rake
+	the target folder is controlled in deploy.rb
+	create a clean template for starting each quarter? 
+	go through past Rural Readers to understand all the different areas, like the find and seek
+	go through each folder/file in the repo to understand what they do.
+	read up on Capistrano(used to deploy website files from repo to server)http://capistranorb.com/https://github.com/capistrano/capistrano
+	read up on Puppet(used to administrate a Linux box remotely)
+		http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
+	read up on Rake
+		http://jasonseifer.com/2010/04/06/rake-tutorialhttp://otaku-elite.com/blog/2013/06/06/rake-status-127/
+	read up on symbolic links
