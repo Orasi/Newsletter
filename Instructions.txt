@@ -19,6 +19,7 @@ ToDo:
 	get Lew to fix permissions for deploy issue - done
 	Ask Lew what tells the webserver to pull the files from var/www/rural-reader/2015/q1/current and how to change that to q2
 		- has to do with symlinks, reference email from Lew
+		-For the question fix the symlink under rural-directory for rural_reader.  To do this just `rm rural_reader` then use ` ln -s /path/to/file /path/to/symlink` for example `ln -s /var/www/rural-reader/2015/q1/current rural_reader`. 
 	figure out how to generate files for q2 with rake
 	the target folder is controlled in deploy.rb
 	create a clean template for starting each quarter? 
