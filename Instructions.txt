@@ -16,7 +16,10 @@ verify the live site looks good
 live website files are accessible in /vars/www/rural-reader/q1/current (this is controlled by the :deploy_to variable in the deploy.rb)
 
 	each article should have a haml file with the article contents in articles/content
-	articles/articles.yml controls the order of the articles and what is visible
+	articles/articles.yml
+		controls the order of the articles
+		controls what articles are visible on the page
+		controls what articles get built
 
 ToDo:
 	Ask Lew what tells the webserver to pull the files from var/www/rural-reader/2015/q1/current and how to change that to q2
