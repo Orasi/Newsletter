@@ -39,13 +39,13 @@ def get_prev_article(articles_yaml, index)
   get_prev_article(articles_yaml, prev_index)
 end
 
-def get_avatar(first_name, last_name)
+def get_avatar(name)
   Dir['img/avatars/*.jpg'].each do |image_file|
-    if File.basename(image_file, '.jpg') == first_name + '_' + last_name
+    if File.basename(image_file, '.jpg') == name
       return image_file 
     end
   end
-  Kernel.puts "Could not find matching avatar for [#{first_name}_#{last_name}]"
+  Kernel.puts "Could not find matching avatar for [#{name}]"
   return File.path('/img/avatars/placeholder.jpg')
 end
 
