@@ -1,43 +1,14 @@
-# Simple Role Syntax
-# ==================
-# Supports bulk-adding hosts to roles, the primary server in each group
-# is considered to be the first unless any hosts have the primary
-# property set.  Don't declare `role :all`, it's a meta role.
+# Default branch is :master, so it does not need to be specified
+# Set the branch to master
+branch_to_deploy = "master"
+set :branch, branch_to_deploy
 
-role :web, %w{damien@69.61.108.36}
+# Set the deploy folder to be the location of the current version
+# this will need to be updated whenever a new issue needs to be deployed
+# The symbolic link "current" in /var/www/rural-reader will also need to be updated 
+# to match this value
+folder_to_deploy = '/var/www/rural-reader/2015/q1'
+set :deploy_to, folder_to_deploy
 
-
-# Extended Server Syntax
-# ======================
-# This can be used to drop a more detailed server definition into the
-# server list. The second argument is a, or duck-types, Hash and is
-# used to set extended properties on the server.
-
-server '69.61.108.36', user: 'damien', roles: %w{web}
-
-
-# Custom SSH Options
-# ==================
-# You may pass any option but keep in mind that net/ssh understands a
-# limited set of options, consult[net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start).
-#
-# Global options
-# --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
-#
-# And/or per server (overrides global)
-# ------------------------------------
-# server 'example.com',
-#   user: 'user_name',
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: 'user_name', # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: 'please use keys'
-#   }
+# Display a status message with the selected options
+puts "Deploying branch: #{branch_to_deploy} to folder: #{folder_to_deploy}"
