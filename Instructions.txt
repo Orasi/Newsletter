@@ -13,6 +13,10 @@ ssh damien@69.61.108.36
 to deploy:
 bundle exec cap production deploy
 bundle exec cap production deploy | tee cap_log.txt
+
+make changes to index page in: 
+index.html.erb
+
 Get help from Jock, he might know more about front end stuff
 figure out why Alissa isn;t geting merge request emails
 Notes from Meeting with Lewis:use 'rake' to create the website from the contents 
