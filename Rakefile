@@ -3,6 +3,8 @@ require 'bundler/setup'
 Bundler.require
 require 'yaml'
 require 'active_support/core_ext'
+require 'pry-byebug'
+# binding.pry
 
 include ActiveSupport::Inflector
 
@@ -19,8 +21,10 @@ task minify_javascripts: javascripts.ext('min')
 task landing_page: 'index.html'
 
 task :images do
+  puts "optimizing jpegs..."
   images.each do |image|
-    sh "jpegoptim --strip-all --quiet #{image.gsub(/ /, '\ ')}"
+    jpegoptim_output = "jpegoptim --strip-all --quiet #{image.gsub(/ /, '\ ')}"
+    # puts 'jpegoptim_output >>>>>>>>>> ' + jpegoptim_output
   end
 end
 
@@ -34,6 +38,16 @@ def get_prev_article(articles_yaml, index)
   prev_index = index == 0 ? articles_yaml.keys.size - 1 : index - 1
   return articles_yaml.keys[prev_index] unless articles_yaml[articles_yaml.keys[prev_index]]['hidden'] == true
   get_prev_article(articles_yaml, prev_index)
+end
+
+def get_avatar(first_name, last_name)
+  Dir['img/avatars/*.jpg'].each do |image_file|
+    if File.basename(image_file, '.jpg') == first_name + '_' + last_name
+      return image_file 
+    end
+  end
+  Kernel.puts "Could not find matching avatar for [#{first_name}_#{last_name}]"
+  return File.path('/img/avatars/placeholder.jpg')
 end
 
 articles_yaml = YAML.load_file('articles/articles.yml')

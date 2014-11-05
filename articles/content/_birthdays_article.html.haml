@@ -1,17 +1,19 @@
 %h3 Birthdays
 .image-grid.avatar-section
   %ul#birthdays
-    - Dir['img/avatars/birthdays/*.jpg'].each do |image_file|
+    - File.readlines('articles/content/birthdays.txt').each do |p|
+      - first_name, last_name, month, day = p.strip.split('_')
+      - birthday = Time.new(Time.now.year,month,day)
+      - title = "#{first_name.capitalize} #{last_name.capitalize} - #{birthday.strftime('%B')} #{ordinalize(birthday.strftime('%e'))}"
       %li
-        - first_name, last_name, month, day = File.basename(image_file).split(".").first.split('_')
-        - birthday = Time.new(Time.now.year,month,day)
-        - title = "#{first_name.capitalize} #{last_name.capitalize}\r\n #{birthday.strftime('%B')} #{ordinalize(birthday.strftime('%e'))}"
-        %img.avatar{ src: "../#{image_file}", 'data-toggle' => 'tooltip', title: title }
+      %img.avatar{ src: "../#{get_avatar(first_name, last_name)}", 'data-toggle' => 'tooltip', title: title }
 %h3 Anniversaries
 .image-grid.avatar-section
   %ul#anniversaries
-    - Dir['img/avatars/anniversaries/*.jpg'].each do |image_file|
-      - first_name, last_name, year, month, day = File.basename(image_file).split(".").first.split('_')
-      - title = "#{first_name.capitalize} #{last_name.capitalize} #{Time.new(year,month,day).strftime('%B %e, %Y')}"
+    - i = 0
+    - File.readlines('articles/content/anniversaries.txt').each do |p|
+      - first_name, last_name, month, day, year = p.strip.split('_')
+      - title = "#{first_name.capitalize} #{last_name.capitalize} - #{Time.new(year,month,day).strftime("%B %-e, %Y")}"
+
       %li
-        %img.avatar{ src: "../#{image_file}", 'data-toggle' => 'tooltip', 'data-placement' => 'top', title: title }
+      %img.avatar{ src: "../#{get_avatar(first_name, last_name)}", 'data-toggle' => 'tooltip', 'data-placement' => 'top', title: title }
