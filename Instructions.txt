@@ -10,9 +10,11 @@ wishlist:
 to access Atlanta server:
 ssh damien@69.61.108.36
 
-to deploy:
+to deploy to stage with your current branch:
+bundle exec cap staging deploy
+
+to deploy to production with the master branch:
 bundle exec cap production deploy
-bundle exec cap production deploy | tee cap_log.txt
 
 make changes to index page in: 
 index.html.erb
