@@ -1,4 +1,6 @@
 birthdays:
   title: Birthdays and Anniversaries
   no_gallery: true
-  
+announcements:
+  title: Announcements
+  no_gallery: true
