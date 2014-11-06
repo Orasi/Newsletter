@@ -8,6 +8,10 @@ set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
 
+# tell the remote machine to only update from git instead of 
+# cloning the entire repo each time
+
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group
