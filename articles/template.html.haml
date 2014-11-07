@@ -51,13 +51,15 @@
         - else
           = Tilt.new(article_file_name).render(Object.new, image_folder: "../img/#{folder}")
 
-        - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
+        - images = (Dir["img/#{folder}/*.jpg"] - Dir["img/#{folder}/opening.jpg"] + Dir["img/#{folder}/*.gif"])
         - if images.size > 0 && !defined?(no_gallery)
           %hr/
           .image-grid.grid-section
             - images.each do |img|
               - unless File.basename(img).include?('no_gallery')
-                %img{src: "../#{img}"} 
+                %a{href: "../#{img}"}
+                  %img{src: "../#{img}"}
+                // %img{src: "../#{img}", href: "../#{img}"} 
         %script{src:'../js/article.min.js'}
 
 
