@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 
 # create the deploy environments and set staging as default
 set :stages, ['staging', 'production']
-set :default_stage, 'staging
+set :default_stage, 'staging'
 
 # tell the remote machine to only update from git instead of 
 # cloning the entire repo each time
@@ -18,7 +18,6 @@ set :copy_exclude, [ '.git' ]
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-
 role :web, %w{damien@69.61.108.36}
 
 # Extended Server Syntax
