@@ -19,6 +19,8 @@ bundle exec cap production deploy
 make changes to index page in: 
 index.html.erb
 
+bylines are handled in _grid_layout.html.haml
+
 Get help from Jock, he might know more about front end stuff
 figure out why Alissa isn;t geting merge request emails
 Notes from Meeting with Lewis:use 'rake' to create the website from the contents 
