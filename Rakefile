@@ -8,7 +8,7 @@ require 'active_support/core_ext'
 include ActiveSupport::Inflector
 
 task default: :build
-task build: %i(landing_page articles stylesheets minify_javascripts images)
+task build: %i(clean landing_page articles stylesheets minify_javascripts images)
 
 stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
