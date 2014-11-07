@@ -10,7 +10,8 @@ set :default_stage, "staging"
 
 # tell the remote machine to only update from git instead of 
 # cloning the entire repo each time
-
+set :deploy_via, :remote_cache
+set :copy_exclude, [ '.git' ]
 
 # Simple Role Syntax
 # ==================
