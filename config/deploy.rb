@@ -5,8 +5,8 @@ set :application, 'rr_q1_fy15'
 set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 
 # create the deploy environments and set staging as default
-set :stages, ["staging", "production"]
-set :default_stage, "staging"
+set :stages, ['staging', 'production']
+set :default_stage, 'staging
 
 # tell the remote machine to only update from git instead of 
 # cloning the entire repo each time
@@ -55,7 +55,7 @@ set :keep_releases, 2
 
 namespace :deploy do
   after :publishing, :restart do
-    on roles(:all) do |host|
+    on roles(:all) do
       within "#{deploy_to}/current/" do
         execute :bundle, 'install --deployment'
         execute :bundle, :exec, :rake
