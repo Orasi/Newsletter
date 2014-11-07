@@ -20,9 +20,9 @@ task minify_javascripts: javascripts.ext('min')
 task landing_page: 'index.html'
 
 task :images do
-  puts "optimizing jpegs..."
+  puts 'optimizing jpegs...'
   images.each do |image|
-    jpegoptim_output = "jpegoptim --strip-all --quiet #{image.gsub(/ /, '\ ')}"
+    "jpegoptim --strip-all --quiet #{image.gsub(/ /, '\ ')}"
     # puts 'jpegoptim_output >>>>>>>>>> ' + jpegoptim_output
   end
 end
@@ -41,12 +41,10 @@ end
 
 def get_avatar(name)
   Dir['img/avatars/*.jpg'].each do |image_file|
-    if File.basename(image_file, '.jpg') == name
-      return image_file 
-    end
+    return image_file if File.basename(image_file, '.jpg') == name
   end
   Kernel.puts "Could not find matching avatar for [#{name}]"
-  return File.path('/img/avatars/placeholder.jpg')
+  File.path('/img/avatars/placeholder.jpg')
 end
 
 articles_yaml = YAML.load_file('articles/articles.yml')
@@ -54,7 +52,7 @@ articles_yaml.keys.each_with_index do |article, index|
   file "articles/#{article}.html" => [Dir["articles/content/_#{article}_article.html*"].first, 'articles/template.html.haml', 'articles/articles.yml'] do |t|
     article_locals = articles_yaml[article]
     article_locals['folder'] = article
-    next_index = index == articles_yaml.keys.size - 1 ? 0 : index + 1
+    # next_index = index == articles_yaml.keys.size - 1 ? 0 : index + 1
     article_locals['next_article'] = get_next_article(articles_yaml, index)
     article_locals['prev_article'] = get_prev_article(articles_yaml, index)
     article_name = article_locals['page_name'].present? ? "articles/#{article_locals['page_name']}.html" : t.name
@@ -90,13 +88,15 @@ end
 rule '.min' => '.js' do |t|
   puts "Writing #{t.name}.js"
   File.open("#{t.name}.js", 'w') do |f|
-    f.write Uglifier.new(output: {comments: :none}).compile(File.read(t.source))
+    f.write Uglifier.new(output: { comments: :none }).compile(File.read(t.source))
   end
 end
 
 task :clean do
   Dir['articles/*.html'].each do |article|
-    rm article
+    puts 'Deleting old version of ' + article
+    File.delete(article)
   end
-  rm 'index.html'
+  puts 'Deleting old version of index.html'
+  File.delete('index.html') if File.exist?('index.html')
 end
