@@ -56,7 +56,8 @@
           %hr/
           .image-grid.grid-section
             - images.each do |img|
-              %img{src: "../#{img}"}
+              - unless File.basename(img).include?('no_gallery')
+                %img{src: "../#{img}"} 
         %script{src:'../js/article.min.js'}
 
 
