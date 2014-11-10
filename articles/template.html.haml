@@ -39,7 +39,7 @@
         - if defined?(author)
           .author-section
             .avatar
-              %img{src: "../img/avatars/#{author.downcase.tr_s(' ','_')}.jpg"}
+              %img{src: "../#{get_avatar(author.downcase.tr_s(' ','_'))}"}
             .author-name
               %h4
                 by
