@@ -26,8 +26,14 @@
             %a{href: 'mailto:alissa.taylor@orasi.com'} Alissa Taylor
       %li
         %a{href: "articles/#{folder}.html"}
-          - image = File.exist?("img/#{folder}/opening.jpg") ? "img/#{folder}/opening.jpg" : "http://placehold.it/640x480.jpg/357bb9"
-          %img{src: image}
+          - if File.exist?("img/#{folder}/opening.jpg")
+            - image = "img/#{folder}/opening.jpg"
+          - elsif File.exist?("img/#{folder}/opening.png")
+            - image = "img/#{folder}/opening.png"
+          - else
+            - image = "http://placehold.it/640x480.jpg/357bb9"            
+          // - image = File.exist?("img/#{folder}/opening.jpg") ? "img/#{folder}/opening.jpg" : "http://placehold.it/640x480.jpg/357bb9"
+          %img{src: image, width: '100%'}
             %h3= value['title']
           - i += 1
     %li.title-box
