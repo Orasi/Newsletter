@@ -93,10 +93,13 @@ rule '.min' => '.js' do |t|
 end
 
 task :clean do
-  Dir['articles/*.html'].each do |article|
-    puts 'Deleting old version of ' + article
-    File.delete(article)
+  files_to_delete = Dir['articles/*.html']
+  files_to_delete << "index.html"
+  files_to_delete << "css/article.css"
+  files_to_delete.each do |x|
+    if File.exist?(x)
+      File.delete(x) 
+      puts 'Deleting old version of ' + x
+    end
   end
-  puts 'Deleting old version of index.html'
-  File.delete('index.html') if File.exist?('index.html')
 end
