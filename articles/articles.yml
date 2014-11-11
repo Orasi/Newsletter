@@ -42,3 +42,8 @@ atl_events:
 foster:
   title: Fostering and Animal Rescue
   author: Anna Phillips
+consultants:
+  title: Meet the Consultants
+  author: Timothy Ruckriegel
+  no_gallery: true
+  
