@@ -30,4 +30,13 @@ project_spotlight_cdw:
 recipe:
   title: Garlic and Herb Cheese Bombs
   author: Julia Walser
+charity:
+  title: Greensboro Charity Initiative - Second Harvest Food Bank
+  author: Michelle Tolliver
+gso_events:
+  title: Greensboro Events
+  no_gallery: true
+atl_events:
+  title: Atlanta Events
+  no_gallery: true
   
