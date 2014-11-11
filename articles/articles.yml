@@ -39,4 +39,6 @@ gso_events:
 atl_events:
   title: Atlanta Events
   no_gallery: true
-  
+foster:
+  title: Fostering and Animal Rescue
+  author: Anna Phillips
