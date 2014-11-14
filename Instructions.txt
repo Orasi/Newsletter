@@ -6,6 +6,21 @@ wishlist:
     archive page for accessing past issues
     
 
+
+to access Atlanta server:
+ssh damien@69.61.108.36
+
+to deploy to stage with your current branch:
+bundle exec cap staging deploy
+
+to deploy to production with the master branch:
+bundle exec cap production deploy
+
+make changes to index page in: 
+index.html.erb
+
+bylines are handled in _grid_layout.html.haml
+
 Get help from Jock, he might know more about front end stuff
 figure out why Alissa isn;t geting merge request emails
 Notes from Meeting with Lewis:use 'rake' to create the website from the contents 
@@ -16,7 +31,10 @@ verify the live site looks good
 live website files are accessible in /vars/www/rural-reader/q1/current (this is controlled by the :deploy_to variable in the deploy.rb)
 
 	each article should have a haml file with the article contents in articles/content
-	articles/articles.yml controls the order of the articles and what is visible
+	articles/articles.yml
+		controls the order of the articles
+		controls what articles are visible on the page
+		controls what articles get built
 
 ToDo:
 	Ask Lew what tells the webserver to pull the files from var/www/rural-reader/2015/q1/current and how to change that to q2

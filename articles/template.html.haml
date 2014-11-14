@@ -1,5 +1,6 @@
 -# coding: UTF-8
 -config = YAML.load_file(File.expand_path('../../articles/articles.yml', __FILE__))
+-wrong_tail = "../articles/wrong_tail.html"
 !!! 5
 %html
   %head
@@ -39,7 +40,7 @@
         - if defined?(author)
           .author-section
             .avatar
-              %img{src: "../img/avatars/#{author.downcase.tr_s(' ','_')}.jpg"}
+              %img{src: "../#{get_avatar(author.downcase.tr_s(' ','_'))}"}
             .author-name
               %h4
                 by
@@ -51,12 +52,17 @@
         - else
           = Tilt.new(article_file_name).render(Object.new, image_folder: "../img/#{folder}")
 
-        - images = (Dir["img/#{folder}/*.jpg"] - ["img/#{folder}/opening.jpg"])
+        - images = (Dir["img/#{folder}/*.jpg"] - Dir["img/#{folder}/opening.jpg"] + Dir["img/#{folder}/*.gif"])
         - if images.size > 0 && !defined?(no_gallery)
           %hr/
           .image-grid.grid-section
             - images.each do |img|
-              %img{src: "../#{img}"}
+              -link = "../#{img}"
+              - unless File.basename(img).include?('no_gallery')
+                -link = wrong_tail if img.include?('_tail')
+                %a{href: "#{link}"}
+                  %img{src: "../#{img}"}
+                // %img{src: "../#{img}", href: "../#{img}"} 
         %script{src:'../js/article.min.js'}
 
 

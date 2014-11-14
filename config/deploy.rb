@@ -4,11 +4,29 @@ lock '3.2.1'
 set :application, 'rr_q1_fy15'
 set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# create the deploy environments and set staging as default
+set :stages, ['staging', 'production']
+set :default_stage, 'staging'
 
-# Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/rural-reader/2015/q2'
+# tell the remote machine to only update from git instead of
+# cloning the entire repo each time
+set :deploy_via, :remote_cache
+set :copy_exclude, ['.git']
+
+# Simple Role Syntax
+# ==================
+# Supports bulk-adding hosts to roles, the primary server in each group
+# is considered to be the first unless any hosts have the primary
+# property set.  Don't declare `role :all`, it's a meta role.
+role :web, %w(damien@69.61.108.36)
+
+# Extended Server Syntax
+# ======================
+# This can be used to drop a more detailed server definition into the
+# server list. The second argument is a, or duck-types, Hash and is
+# used to set extended properties on the server.
+
+server '69.61.108.36', user: 'damien', roles: %w(web)
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -36,7 +54,7 @@ set :keep_releases, 2
 
 namespace :deploy do
   after :publishing, :restart do
-    on roles(:all) do |host|
+    on roles(:all) do
       within "#{deploy_to}/current/" do
         execute :bundle, 'install --deployment'
         execute :bundle, :exec, :rake
