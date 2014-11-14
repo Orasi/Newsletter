@@ -8,17 +8,28 @@ require 'active_support/core_ext'
 include ActiveSupport::Inflector
 
 task default: :build
+
+desc "Build the website"
 task build: %i(clean landing_page articles stylesheets minify_javascripts images)
 
 stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
 javascripts.exclude('js/*.min.js')
 images = Rake::FileList['**/*.jpg']
+
+desc "Process stylesheets"
 task stylesheets: stylesheets.ext('css')
+
+desc "Process javascript"
 task javascripts: javascripts.ext('js')
+
+desc "Minify javascript"
 task minify_javascripts: javascripts.ext('min')
+
+desc "Create landing page / index.html"
 task landing_page: 'index.html'
 
+desc "Proccess jpegs with jpegoptim"
 task :images do
   puts 'optimizing jpegs...'
   images.each do |image|
@@ -63,6 +74,7 @@ articles_yaml.keys.each_with_index do |article, index|
   end
 end
 
+desc "Maps the yaml data to individual article html files"
 task articles: articles_yaml.keys.map { |article| "articles/#{article}.html" }
 
 file 'index.html' => %w(index.html.erb
@@ -92,6 +104,7 @@ rule '.min' => '.js' do |t|
   end
 end
 
+desc "Clean up previous generated versions of files before creating new ones"
 task :clean do
   files_to_delete = Dir['articles/*.html']
   files_to_delete << "index.html"
