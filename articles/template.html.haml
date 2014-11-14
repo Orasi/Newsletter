@@ -56,8 +56,10 @@
           %hr/
           .image-grid.grid-section
             - images.each do |img|
+              -link = img
               - unless File.basename(img).include?('no_gallery')
-                %a{href: "../#{img}"}
+                -link = "../articles/wrong_tail.html" if img.include?('_tail')
+                %a{href: "../#{link}"}
                   %img{src: "../#{img}"}
                 // %img{src: "../#{img}", href: "../#{img}"} 
         %script{src:'../js/article.min.js'}

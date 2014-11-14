@@ -53,4 +53,8 @@ guess_who:
   title: Guess Who
   page_name: you_found_me
   hidden: true
+wrong_tail:
+  title: You're getting close...
+  hidden: true
+  no_gallery: true
   
