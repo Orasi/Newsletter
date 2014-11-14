@@ -1,5 +1,6 @@
 -# coding: UTF-8
 -config = YAML.load_file(File.expand_path('../../articles/articles.yml', __FILE__))
+-wrong_tail = "../articles/wrong_tail.html"
 !!! 5
 %html
   %head
@@ -56,10 +57,10 @@
           %hr/
           .image-grid.grid-section
             - images.each do |img|
-              -link = img
+              -link = "../#{img}"
               - unless File.basename(img).include?('no_gallery')
-                -link = "../articles/wrong_tail.html" if img.include?('_tail')
-                %a{href: "../#{link}"}
+                -link = wrong_tail if img.include?('_tail')
+                %a{href: "#{link}"}
                   %img{src: "../#{img}"}
                 // %img{src: "../#{img}", href: "../#{img}"} 
         %script{src:'../js/article.min.js'}
