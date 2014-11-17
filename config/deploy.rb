@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'rr_q1_fy15'
+set :application, 'rural_reader'
 set :repo_url, 'git@github.com:Orasi/Newsletter.git'
 
 # create the deploy environments and set staging as default

@@ -1,4 +1,3 @@
-# Default branch is :master, so it does not need to be specified
 # Set the branch to master
 branch_to_deploy = 'master'
 set :branch, branch_to_deploy
