@@ -11,4 +11,11 @@ folder_to_deploy = '/var/www/rural-reader/2015/q2'
 set :deploy_to, folder_to_deploy
 
 # Display a status message with the selected options
-puts "Deploying branch: #{branch_to_deploy} to folder: #{folder_to_deploy}"
+puts "\nDeploying branch: #{branch_to_deploy} to folder: #{folder_to_deploy}\n"
+puts "\n\e[0;33mIs this the correct confiuration?\e[0m"
+set :response, ask("\e[0;32m'Y'\e[0m to continue,\e[0;31m 'N'\e[0m to abort.", nil)
+validate = fetch(:response)
+unless validate.upcase == 'Y'
+  puts "\e[0;31m Aborting......\e[0m\n"
+  exit
+end
