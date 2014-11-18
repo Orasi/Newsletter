@@ -47,3 +47,5 @@ ToDo:
 		http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
 	read up on Rake
 		http://jasonseifer.com/2010/04/06/rake-tutorialhttp://otaku-elite.com/blog/2013/06/06/rake-status-127/
+
+ln -s /path/to/file /path/to/symlink
