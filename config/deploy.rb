@@ -55,9 +55,16 @@ set :keep_releases, 2
 namespace :deploy do
   after :publishing, :restart do
     on roles(:all) do
+      # build the site on the remote server
       within "#{deploy_to}/current/" do
         execute :bundle, 'install --deployment'
         execute :bundle, :exec, :rake
+      end
+      # update the symbolic links to point to the new build
+      within "/var/www/rural-reader/" do
+        capture "[ -e #{fetch(:sym_name)} ] && echo 'Removing previous symlink [#{fetch(:sym_name)}] and creating new one' && rm #{fetch(:sym_name)} || echo 'Previous symlink [#{fetch(:sym_name)}] does not exist. Creating new one.'"
+        puts()
+        execute "ln -s #{fetch(:sym_location)} #{fetch(:sym_name)}"
       end
     end
   end
