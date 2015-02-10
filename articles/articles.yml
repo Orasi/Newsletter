@@ -1,61 +1,48 @@
-halloween_g:
-  title: Greensboro Halloween
+atl_christmas_party:
+  title: ATL Christmas Party
   author: Lily Powell
-halloween_a:
-  title: Atlanta Halloween
-  author: Lily Powell
-announcements:
-  title: Announcements
-  author: Jessica Marshall
-  no_gallery: true
-birthdays:
-  title: Birthdays and Anniversaries
-  no_gallery: true
-dull_winter:
-  title: Adding Some Color to a Dull Winter
-  author: Zachary Goins
-  no_gallery: true
+gso_christmas_party:
+  title: GSO Christmas Party
+  author: Zach Goins
+meet_the_new_employees:
+  title: Meet the New Employees
+  author: Tim Ruckriegel
+atl_charity_events:
+  title: ATL Charity Events
+  author: Julie Dodd
+gso_charity_events:
+  title: GSO Charity Events
+  author: Jonathan Doll/Tim Macior
+project_spotlight_smith_nephew_:
+  title: Project Spotlight (Smith & Nephew)
+  author: John Martin
 employee_spotlight:
   title: Employee Spotlight
-  author: Andrew Williams
-cookout:
-  title: Rural Testing Company Cookout
-  author: Jonathan Gordon
-shower_for_lennon:
-  title: A Shower for Lennon
-  author: Alissa Taylor
-project_spotlight_cdw:
-  title: Project Spotlight - CDW
-  author: John Martin
-recipe:
-  title: Garlic and Herb Cheese Bombs
-  author: Julia Walser
-  no_gallery: true
-charity:
-  title: Greensboro Charity Initiative - Second Harvest Food Bank
-  author: Michelle Tolliver
-gso_events:
-  title: Greensboro Events
-  no_gallery: true
-atl_events:
-  title: Atlanta Events
-  no_gallery: true
-foster:
-  title: Fostering and Animal Rescue
-  author: Anna Phillips
-  no_gallery: true
-consultants:
-  title: Meet the Consultants
-  author: Timothy Ruckriegel
-  no_gallery: true
-guess_who_riddle:
-  title: Guess Who Challenge
+  author: Andy Williams
 guess_who:
   title: Guess Who
-  page_name: you_found_me
-  hidden: true
-wrong_tail:
-  title: You're getting close...
-  hidden: true
-  no_gallery: true
-  
+  author: Alissa Taylor
+birthdays_anniversaries_announcements:
+  title: Birthdays/Anniversaries/Announcements
+  author: Jessica Marshall
+gso_atl_events:
+  title: GSO/ATL Events
+  author: Jessica Marshall
+garden_article:
+  title: Garden Article
+  author: Zach Goins
+comic:
+  title: Comic
+  author: Tim Ruckriegel
+atl_thanksgiving_potluck:
+  title: ATL Thanksgiving Potluck
+  author: Julie Dodd
+gso_thanksgiving_potluck:
+  title: GSO Thanksgiving Potluck
+  author: Kevin Munro
+friday_the_13th:
+  title: Friday the 13th
+  author: Julie Dodd
+recipe:
+  title: Recipe
+  author: Julia Walser
