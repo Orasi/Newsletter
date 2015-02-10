@@ -1,29 +1,38 @@
 Development flow:
 1. Clone the repository to one of the following
-	a. to your computer
-	b. to a new instance in Cloud9
+	a. your computer
+	b. a new instance in Cloud9
 2. Create a new branch in git for development of the new edition
-3. Develop new edition
-	a. make appropriate changes
-	b. run the 'rake' command to build a new, local version
-	c. preview the new version to verify the changes
-	d. if the changes are acceptable, commit them to git
+3. Create the website structure and fill in content
+	a. replace the contents of 'article_list' with the current list of articles
+		i. the list should be in the format 'Article Title[tab]Article Author'
+		ii. this list should be in the order the articles should appear
+	b. type 'ruby create_articles.rb' to run the script that creates all of the articles listed in 'article_list'
+	c. fill all of the newly created article files in 'articles/content' with their respective content
+4. Build the new edition
+	a. run the 'rake' command to build a new, local version of the site
+	b. preview the new version to verify the changes
+	c. if the changes are acceptable, commit them to git
 	d. repeat until website is done
-4. Publish development version to the staging location of the website via Capistrano
+5. Publish development version to the staging location of the website via Capistrano
 	a. follow the instructions at the top of '../config/deploy/staging.rb'
 	b. make any necessary changes
 	c. commit the changes and repeat until website is finalized
-5. Publish finalized version to the production location of the website via Capistrano
+6. Publish finalized version to the production location of the website via Capistrano
 	a. merge the development branch into the master branch on git
 	b. follow the instructions at the top of '../config/deploy/staging.rb'
 	c. verify the live site is correct
 	d. celebrate!
-	
+7. Delete unnecessary data in articles/archive
 
-IMPORTANT: Steps 4 and 5 cannot be completed unless your are working from
-an account on a computer that has SSH access to the web server in Atlanta.
+
+IMPORTANT: Steps 5 and 6 cannot be completed unless your are working from
+an account on a computer that has SSH access to the web server in Atlanta @ 69.61.108.36.
 To get access, talk to Matt Watson or Perry Thomas.
 
+Project structure:
+/articles/articles.yml	|	this file contains a list of all the article titles with author information and the various article flags: no_gallery, hidden, page_name. Rake uses this to generate all of the article html files. 
+/articles/content		|	this folder contains the .haml content file for each article. Each article must be listed in /article/articles.yml or it won't be processed by Rake.
 
 Terms & Concepts:
 Git
@@ -39,12 +48,13 @@ ToDo:
 -create guide for website design so others can develop
 -define terms and concepts
 
-Newsletter goes out on the 02/13/15
+Newsletter goes out on 02/13/15
 Build out documentation as I learn it
 wishlist:
     gallery for pictures that allows people to zoom/browse
     claymation thing with the logo is too slow
     archive page for accessing past issues
+    add last updated date to bottom of index, should reflect last time page was compiled
 
 to access Atlanta server:
 ssh damien@69.61.108.36
@@ -69,3 +79,4 @@ articles/articles.yml
 ToDo:
 read up on Puppet(used to administrate a Linux box remotely)
 	http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
+
