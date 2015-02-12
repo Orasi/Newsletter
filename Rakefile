@@ -16,6 +16,7 @@ stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
 javascripts.exclude('js/*.min.js')
 images = Rake::FileList['**/*.jpg']
+all_files = Rake::FileList['**/*']
 
 desc "Report build complete"
 task :report do
@@ -109,7 +110,7 @@ rule '.min' => '.js' do |t|
   end
 end
 
-desc 'Clean up previous generated versions of files before creating new ones'
+desc 'Clean up previous generated versions of files before creating new ones and fix file extension issues'
 task :clean do
   files_to_delete = Dir['articles/*.html']
   files_to_delete << 'index.html'
@@ -118,6 +119,16 @@ task :clean do
     if File.exist?(x)
       File.delete(x)
       puts 'Deleting old version of ' + x
+    end
+  end
+  all_files.each do |f|
+    if File.extname(f).match(/\p{Upper}/) != nil
+      puts "Making extension lowercase for file: #{f}"
+      File.rename(f,  File.path(f).sub(File.basename(f), '') + File.basename(f).sub(File.extname(f), '') + File.extname(f).downcase)
+    end
+    if File.extname(f).downcase == '.jpeg'
+      puts "Changing extension from .jpeg to jpg for file: #{f}"
+      File.rename(f,  File.path(f).sub(File.basename(f), '') + File.basename(f).sub(File.extname(f), '') + '.jpg')
     end
   end
 end
