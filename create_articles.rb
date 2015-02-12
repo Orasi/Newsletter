@@ -1,5 +1,3 @@
-require 'fileutils'
-
 articles_file = 'articles/articles.yml'
 event_format = ".card\n  .header-image{style: 'background-image: url('../img/ARTICLE_IMAGE_FOLDER/IMAGE_NAME.jpg');'}\n  .details\n    %h3 EVENT_TITLE - EVENT_TIME\n    %span\n      EVENT_DESCRIPTION\n      %p\n        %a{href: 'EVENT_URL'} EVEN_URL_DESCRIPTION"
 
@@ -34,7 +32,9 @@ File.readlines('article_list').each do |l|
   end
 
   # create an img directory for the article
-  FileUtils::mkdir_p "img/#{filename}" unless Dir.exist?("img/#{filename}")
+  unless Dir.exist?("img/#{filename}")
+    system(mkdir_p "img/#{filename}")
+  end
 
 end
 
@@ -54,7 +54,7 @@ Dir.glob('img/*/').each do |d|
   img_folder = File.basename(d)
   unless articles.include?("_#{img_folder}_article.html.haml")
     puts "Folder img/#{img_folder} isn't associated with an article in the article list, so it is being archived."
-    FileUtils.move "img/#{img_folder}", "archived/img/#{img_folder}"
+    system("mv img/#{img_folder}, archived/img/#{img_folder}")
   end
 end
 
