@@ -33,7 +33,7 @@ File.readlines('article_list').each do |l|
 
   # create an img directory for the article
   unless Dir.exist?("img/#{filename}")
-    system(mkdir_p "img/#{filename}")
+    system("mkdir img/#{filename}")
   end
 
 
@@ -59,7 +59,7 @@ Dir.glob('img/*/').each do |d|
   img_folder = File.basename(d)
   unless articles.include?("_#{img_folder}_article.html.haml") || File.basename(d) == 'avatars' || File.basename(d) == 'birthdays_anniversaries'
     puts "Folder img/#{img_folder} isn't associated with an article in the article list, so it is being archived."
-    system("mv img/#{img_folder}, archived/img/#{img_folder}")
+    system("mv img/#{img_folder} archived/img/#{img_folder}")
   end
 end
 
