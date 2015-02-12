@@ -1,4 +1,5 @@
 articles_file = 'articles/articles.yml'
+event_format = ".card\n  .header-image{style: 'background-image: url('../img/ARTICLE_IMAGE_FOLDER/IMAGE_NAME.jpg');'}\n  .details\n    %h3 EVENT_TITLE -EVENT_TIME\n    %span\n      EVENT_DESCRIPTION\n      %p\n        %a{href: 'EVENT_URL'} EVEN_URL_DESCRIPTION"
 
 # archive any existing files
 if File.exist?(articles_file)
@@ -18,7 +19,10 @@ File.readlines('article_list').each do |l|
   open(articles_file, 'a') { |f| f.puts article_data }
   open("articles/content/#{full_filename}", 'a') do |f|
     puts "Created/appended article file: #{full_filename}"
-    # f.puts "%p.article-text\n\tPlaceholder text"
+    if filename.include?('event') && File.zero?(f)
+      f.puts "-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
+      f.puts event_format
+    end
   end
 end
 
