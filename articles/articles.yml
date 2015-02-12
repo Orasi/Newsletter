@@ -62,3 +62,6 @@ guess_who:
   title: Guess Who
   author: Alissa Taylor
   no_gallery: false
+birthdays_anniversaries:
+  title: Birthdays and Anniversaries
+  no_gallery: true

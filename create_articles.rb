@@ -36,7 +36,12 @@ File.readlines('article_list').each do |l|
     system(mkdir_p "img/#{filename}")
   end
 
+
+
 end
+
+# add the birthdays article
+open(articles_file, 'a') { |f| f.puts "birthdays_anniversaries:\n  title: Birthdays and Anniversaries\n  no_gallery: true" }
 
 # archive any article content files that weren't in the list, except for the birthdays artcile
 puts "\n----\nArchiving unlisted article resources\n----"
@@ -48,11 +53,11 @@ Dir.glob('articles/content/*.haml').each do |f|
   end
 end
 
-# archive any image folders for articles that weren't in the list
+# archive any image folders for articles that weren't in the list, except the avatars folder
 Dir.mkdir('archived/img') unless Dir.exist?('archived/img')
 Dir.glob('img/*/').each do |d|
   img_folder = File.basename(d)
-  unless articles.include?("_#{img_folder}_article.html.haml")
+  unless articles.include?("_#{img_folder}_article.html.haml") || File.basename(d) == 'avatars' || File.basename(d) == 'birthdays_anniversaries'
     puts "Folder img/#{img_folder} isn't associated with an article in the article list, so it is being archived."
     system("mv img/#{img_folder}, archived/img/#{img_folder}")
   end
