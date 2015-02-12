@@ -3,8 +3,8 @@ event_format = ".card\n  .header-image{style: 'background-image: url('../img/ART
 
 # archive any existing files
 if File.exist?(articles_file)
-  renamed = "articles/archived/articles_#{Time.now.strftime('%Y%m%d_%H%M%S')}.yml"
-  puts "\n----\nRenaming #{articles_file} to #{renamed} and moving it to 'articles/archived'\n----"
+  renamed = "archived/articles_#{Time.now.strftime('%Y%m%d_%H%M%S')}.yml"
+  puts "\n----\nRenaming #{articles_file} to #{renamed} and moving it to 'archived'\n----"
   File.rename(articles_file, renamed)
 end
 
@@ -32,6 +32,6 @@ article_files = Dir.glob('articles/content/*.haml')
 article_files.each do |f|
   unless articles.include?(File.basename(f))
     puts "File [#{File.basename(f)}] isn't in the article list, so its being archived."
-    File.rename(f, "articles/archived/#{File.basename(f)}")
+    File.rename(f, "archived/#{File.basename(f)}")
   end
 end

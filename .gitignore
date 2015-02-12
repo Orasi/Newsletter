@@ -6,4 +6,4 @@
 articles/*.html
 index.html
 .c9
-articles/archived/*
+archived/*
