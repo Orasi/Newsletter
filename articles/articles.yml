@@ -1,48 +1,48 @@
-atl_christmas_party:
-  title: ATL Christmas Party
-  author: Lily Powell
-gso_christmas_party:
-  title: GSO Christmas Party
-  author: Zach Goins
-meet_the_new_employees:
-  title: Meet the New Employees
-  author: Tim Ruckriegel
-atl_charity_events:
-  title: ATL Charity Events
+the_history_of_friday_the_13th:
+  title: The History of Friday the 13th
   author: Julie Dodd
-gso_charity_events:
-  title: GSO Charity Events
-  author: Jonathan Doll/Tim Macior
-project_spotlight_smith_nephew_:
-  title: Project Spotlight (Smith & Nephew)
-  author: John Martin
-employee_spotlight:
-  title: Employee Spotlight
-  author: Andy Williams
-guess_who:
-  title: Guess Who
-  author: Alissa Taylor
-birthdays_anniversaries_announcements:
-  title: Birthdays/Anniversaries/Announcements
-  author: Jessica Marshall
-gso_atl_events:
-  title: GSO/ATL Events
-  author: Jessica Marshall
-garden_article:
-  title: Garden Article
+atlanta_christmas_party:
+  title: Atlanta Christmas Party
+  author: Lily Powell
+early_spring_gardening:
+  title: Early Spring Gardening
   author: Zach Goins
+employee_spotlight_kevin_hedgecock:
+  title: Employee Spotlight - Kevin Hedgecock
+  author: Andy Williams
+buffalo_chicken_crescent_ring:
+  title: Buffalo Chicken Crescent Ring
+  author: Julia Walser
+atlanta_greensboro_events:
+  title: Atlanta/Greensboro events
+  author: Jessica Marshall
+kennesaw_thanksgiving_potluck:
+  title: Kennesaw Thanksgiving Potluck
+  author: Julie Dodd
+greensboro_thanksgiving_potluck:
+  title: Greensboro Thanksgiving Potluck
+  author: Kevin Munro
+orasi_s_christmas_angels:
+  title: Orasi’s Christmas Angels
+  author: Julie Dodd
+greensboro_angel_tree_program:
+  title: Greensboro Angel Tree Program
+  author: Jonathan Doll & Joey Wysosky
+2014_greensboro_holiday_party:
+  title: 2014 Greensboro Holiday Party
+  author: Zach Goins
+project_spotlight_smith_nephew:
+  title: Project Spotlight - Smith & Nephew
+  author: John Martin
+meet_the_consultants:
+  title: Meet the Consultants
+  author: Tim Ruckriegel
 comic:
   title: Comic
   author: Tim Ruckriegel
-atl_thanksgiving_potluck:
-  title: ATL Thanksgiving Potluck
-  author: Julie Dodd
-gso_thanksgiving_potluck:
-  title: GSO Thanksgiving Potluck
-  author: Kevin Munro
-friday_the_13th:
-  title: Friday the 13th
-  author: Julie Dodd
-recipe:
-  title: Recipe
-  author: Julia Walser
+birthdays_anniversaries_announcements_:
+  title: Birthdays/Anniversaries/Announcements 
+  author: Jessica Marshall
+guess_who_:
+  title: Guess Who 
+  author: Alissa Taylor
