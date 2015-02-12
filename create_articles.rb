@@ -38,11 +38,11 @@ File.readlines('article_list').each do |l|
 
 end
 
-# archive any article content files that weren't in the list
+# archive any article content files that weren't in the list, except for the birthdays artcile
 puts "\n----\nArchiving unlisted article resources\n----"
 Dir.mkdir('archived') unless Dir.exist?('archived')
 Dir.glob('articles/content/*.haml').each do |f|
-  unless articles.include?(File.basename(f))
+  unless articles.include?(File.basename(f)) || File.basename(f) == '_birthdays_anniversaries_article.html.haml'
     puts "File [#{File.basename(f)}] isn't in the article list, so it is being archived."
     File.rename(f, "archived/#{File.basename(f)}")
   end

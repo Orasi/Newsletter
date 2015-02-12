@@ -54,11 +54,11 @@ comic:
   title: Comic
   author: Tim Ruckriegel
   no_gallery: false
-birthdays_anniversaries_announcements_:
-  title: Birthdays/Anniversaries/Announcements 
+announcements:
+  title: Announcements
   author: Jessica Marshall
   no_gallery: false
-guess_who_:
-  title: Guess Who 
+guess_who:
+  title: Guess Who
   author: Alissa Taylor
   no_gallery: false
