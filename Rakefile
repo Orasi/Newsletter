@@ -10,12 +10,17 @@ include ActiveSupport::Inflector
 task default: :build
 
 desc 'Build the website'
-task build: %i(clean landing_page articles stylesheets minify_javascripts images)
+task build: %i(clean landing_page articles stylesheets minify_javascripts images report)
 
 stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
 javascripts.exclude('js/*.min.js')
 images = Rake::FileList['**/*.jpg']
+
+desc "Report build complete"
+task :report do
+  puts "Website build completed at [#{Time.now.to_s}]"
+end
 
 desc 'Process stylesheets'
 task stylesheets: stylesheets.ext('css')
