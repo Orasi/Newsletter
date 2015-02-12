@@ -1,37 +1,61 @@
+require 'fileutils'
+
 articles_file = 'articles/articles.yml'
 event_format = ".card\n  .header-image{style: 'background-image: url('../img/ARTICLE_IMAGE_FOLDER/IMAGE_NAME.jpg');'}\n  .details\n    %h3 EVENT_TITLE - EVENT_TIME\n    %span\n      EVENT_DESCRIPTION\n      %p\n        %a{href: 'EVENT_URL'} EVEN_URL_DESCRIPTION"
 
-# archive any existing files
+# archive existing article.yml
 if File.exist?(articles_file)
   renamed = "archived/articles_#{Time.now.strftime('%Y%m%d_%H%M%S')}.yml"
   puts "\n----\nRenaming #{articles_file} to #{renamed} and moving it to 'archived'\n----"
   File.rename(articles_file, renamed)
 end
 
-# create new files
+# create resources for each new article
 articles = Array.new
 File.readlines('article_list').each do |l|
   title, author = l.strip.split("\t")
   filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
   full_filename = "_#{filename}_article.html.haml"
   articles << full_filename
-  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}"
+  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}\n  no_gallery: false"
+
+  # add the article data to articles.yml
   open(articles_file, 'a') { |f| f.puts article_data }
+
+  # create the content file
   open("articles/content/#{full_filename}", 'a') do |f|
     puts "Created/appended article file: #{full_filename}"
+
+    #add template for events article
     if filename.include?('event') && File.zero?(f)
       f.puts "-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
       f.puts event_format
     end
   end
+
+  # create an img directory for the article
+  FileUtils::mkdir_p "img/#{filename}" unless Dir.exist?("img/#{filename}")
+
 end
 
-# archive any files that weren't in the list
-puts "\n----\nArchiving unlisted article.haml files\n----"
-article_files = Dir.glob('articles/content/*.haml')
-article_files.each do |f|
+# archive any article content files that weren't in the list
+puts "\n----\nArchiving unlisted article resources\n----"
+Dir.mkdir('archived') unless Dir.exist?('archived')
+Dir.glob('articles/content/*.haml').each do |f|
   unless articles.include?(File.basename(f))
-    puts "File [#{File.basename(f)}] isn't in the article list, so its being archived."
+    puts "File [#{File.basename(f)}] isn't in the article list, so it is being archived."
     File.rename(f, "archived/#{File.basename(f)}")
   end
 end
+
+# archive any image folders for articles that weren't in the list
+Dir.mkdir('archived/img') unless Dir.exist?('archived/img')
+Dir.glob('img/*/').each do |d|
+  img_folder = File.basename(d)
+  unless articles.include?("_#{img_folder}_article.html.haml")
+    puts "Folder img/#{img_folder} isn't associated with an article in the article list, so it is being archived."
+    FileUtils.move "img/#{img_folder}", "archived/img/#{img_folder}"
+  end
+end
+
+puts "\n----\nDone creating/updating article structure. Ready for content!\n----\n"
