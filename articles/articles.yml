@@ -5,11 +5,11 @@ the_history_of_friday_the_13th:
 atlanta_christmas_party:
   title: Atlanta Christmas Party
   author: Lily Powell
-  no_gallery: true
+  no_gallery: false
 early_spring_gardening:
   title: Early Spring Gardening
   author: Zach Goins
-  no_gallery: false
+  no_gallery: true
 employee_spotlight_kevin_hedgecock:
   title: Employee Spotlight - Kevin Hedgecock
   author: Andy Williams
@@ -25,7 +25,7 @@ atlanta_greensboro_events:
 kennesaw_thanksgiving_potluck:
   title: Kennesaw Thanksgiving Potluck
   author: Julie Dodd
-  no_gallery: true
+  no_gallery: false
 greensboro_thanksgiving_potluck:
   title: Greensboro Thanksgiving Potluck
   author: Kevin Munro
@@ -41,7 +41,7 @@ greensboro_angel_tree_program:
 2014_greensboro_holiday_party:
   title: 2014 Greensboro Holiday Party
   author: Zach Goins
-  no_gallery: true
+  no_gallery: false
 project_spotlight_smith_nephew:
   title: Project Spotlight - Smith & Nephew
   author: John Martin
@@ -49,11 +49,11 @@ project_spotlight_smith_nephew:
 meet_the_consultants:
   title: Meet the Consultants
   author: Tim Ruckriegel
-  no_gallery: false
+  no_gallery: true
 comic:
   title: Comic
   author: Tim Ruckriegel
-  no_gallery: false
+  no_gallery: true
 announcements:
   title: Announcements
   author: Jessica Marshall
