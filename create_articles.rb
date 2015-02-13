@@ -29,19 +29,21 @@ File.readlines('article_list').each do |l|
   articles << full_filename
   article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}"
   gallery == 'true' ? article_data += "\n  no_gallery: true" : article_data += "\n  no_gallery: false"
-  # puts "Title: #{title} | author: #{author} | gallery: #{gallery}\n#{article_data}"
   # add the article data to articles.yml
   open(articles_file, 'a') { |f| f.puts article_data }
-  puts read_file(articles_file).length
 
   # create the content file
   open("articles/content/#{full_filename}", 'a') do |f|
     puts "Created/appended article file: #{full_filename}"
 
-    #add template for events article
-    if filename.include?('event') && File.zero?(f)
-      f.puts "#-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
-      f.puts event_format
+    # add content placeholders for empty files
+    if File.zero?(f)
+      if filename.include?('event')
+        f.puts "#-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
+        f.puts event_format
+      else
+        f.puts "%p.article-text\n\n\t.small-image.c\n\t\t%img{src: '../img/IMAGE_FOLDER/IMAGE_NAME.jpg'}"
+      end
     end
   end
 
