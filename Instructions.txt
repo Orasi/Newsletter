@@ -31,7 +31,7 @@ an account on a computer that has SSH access to the web server in Atlanta @ 69.6
 To get access, talk to Matt Watson or Perry Thomas.
 
 Project structure:
-/articles/articles.yml	|	this file contains a list of all the article titles with author information and the various article flags: no_gallery, hidden, page_name. Rake uses this to generate all of the article html files. 
+/articles/articles.yml	|	this file contains a list of all the article titles with author information and the various article flags: no_gallery, hidden, page_name. Rake uses this to generate all of the article html files.
 /articles/content		|	this folder contains the .haml content file for each article. Each article must be listed in /article/articles.yml or it won't be processed by Rake.
 
 Terms & Concepts:
@@ -65,7 +65,7 @@ bundle exec cap staging deploy
 to deploy to production with the master branch:
 bundle exec cap production deploy
 
-make changes to index page in: 
+make changes to index page in:
 index.html.erb
 
 bylines are handled in _grid_layout.html.haml
@@ -80,3 +80,5 @@ ToDo:
 read up on Puppet(used to administrate a Linux box remotely)
 	http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
 
+  .image-holder
+    %img{src: '../img/IMAGE_FOLDER/IMAGE_NAME.jpg'}
