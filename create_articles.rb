@@ -1,5 +1,15 @@
+require 'pry'
+require 'pry-byebug'
+
 articles_file = 'articles/articles.yml'
 event_format = ".card\n  .header-image{style: 'background-image: url('../img/ARTICLE_IMAGE_FOLDER/IMAGE_NAME.jpg');'}\n  .details\n    %h3 EVENT_TITLE - EVENT_TIME\n    %span\n      EVENT_DESCRIPTION\n      %p\n        %a{href: 'EVENT_URL'} EVEN_URL_DESCRIPTION"
+
+def read_file(file)
+  f = File.open(file, 'r')
+  data = f.read
+  f.close
+  data
+end
 
 # archive existing article.yml
 if File.exist?(articles_file)
@@ -8,17 +18,21 @@ if File.exist?(articles_file)
   File.rename(articles_file, renamed)
 end
 
+File.open(articles_file, 'w'){ |f| }
+
 # create resources for each new article
 articles = Array.new
 File.readlines('article_list').each do |l|
-  title, author = l.strip.split("\t")
+  title, author, gallery = l.strip.split("|")
   filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
   full_filename = "_#{filename}_article.html.haml"
   articles << full_filename
-  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}\n  no_gallery: false"
-
+  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}"
+  gallery == 'true' ? article_data += "\n  no_gallery: true" : article_data += "\n  no_gallery: false"
+  # puts "Title: #{title} | author: #{author} | gallery: #{gallery}\n#{article_data}"
   # add the article data to articles.yml
   open(articles_file, 'a') { |f| f.puts article_data }
+  puts read_file(articles_file).length
 
   # create the content file
   open("articles/content/#{full_filename}", 'a') do |f|
@@ -26,7 +40,7 @@ File.readlines('article_list').each do |l|
 
     #add template for events article
     if filename.include?('event') && File.zero?(f)
-      f.puts "-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
+      f.puts "#-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
       f.puts event_format
     end
   end
