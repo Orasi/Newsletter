@@ -18,7 +18,7 @@ set :branch, branch_to_deploy
 # Set the deploy folder to be the location of the current version
 # this will need to be updated whenever a new issue needs to be deployed
 # !!!!Make sure you update this BEFORE running cap production deploy!!!!
-folder_to_deploy = '/var/www/rural-reader/2015/q2'
+folder_to_deploy = '/var/www/rural-reader/2015/q3'
 set :deploy_to, folder_to_deploy
 
 # Set the name and location of the symlink
