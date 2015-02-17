@@ -21,15 +21,28 @@ end
 File.open(articles_file, 'w'){ |f| }
 
 # create resources for each new article
+contents = File.readlines('article_list')
 articles = Array.new
-File.readlines('article_list').each do |l|
-  title, author, gallery = l.strip.split("|")
-  filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
+contents.each do |l|
+  l.chomp!
+  attributes = l.strip.split("|||")
+  title, author, no_gallery, hidden, page_name = attributes
+  p attributes
+  # create filename based on the the title or page_name
+  if page_name.nil?
+    filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
+  else
+    filename = page_name.downcase.gsub(/[^0-9a-z]+/, '_')
+  end
   full_filename = "_#{filename}_article.html.haml"
   articles << full_filename
-  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}\n  author: #{author}"
-  gallery == 'true' ? article_data += "\n  no_gallery: true" : article_data += "\n  no_gallery: false"
+
   # add the article data to articles.yml
+  article_data = "#{filename}:\n  title: #{title.gsub(':', ' -')}"
+  article_data += "\n  author: #{author}" unless author.nil? || author.empty?
+  article_data += "\n  no_gallery: true" unless no_gallery.nil?
+  article_data += "\n  hidden: true" unless hidden.nil?
+  article_data += "\n  page_name: #{page_name}" unless page_name.nil?
   open(articles_file, 'a') { |f| f.puts article_data }
 
   # create the content file
