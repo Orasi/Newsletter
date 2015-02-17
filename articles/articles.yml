@@ -5,63 +5,55 @@ the_history_of_friday_the_13th:
 atlanta_christmas_party:
   title: Atlanta Christmas Party
   author: Lily Powell
-  no_gallery: false
+  no_gallery: true
 early_spring_gardening:
   title: Early Spring Gardening
   author: Zach Goins
-  no_gallery: true
 employee_spotlight_kevin_hedgecock:
   title: Employee Spotlight - Kevin Hedgecock
   author: Andy Williams
-  no_gallery: true
 buffalo_chicken_crescent_ring:
   title: Buffalo Chicken Crescent Ring
   author: Julia Walser
-  no_gallery: true
 atlanta_greensboro_events:
   title: Atlanta/Greensboro events
   author: Jessica Marshall
-  no_gallery: true
 kennesaw_thanksgiving_potluck:
   title: Kennesaw Thanksgiving Potluck
   author: Julie Dodd
-  no_gallery: true
 greensboro_thanksgiving_potluck:
   title: Greensboro Thanksgiving Potluck
   author: Kevin Munro
-  no_gallery: true
 orasi_s_christmas_angels:
   title: Orasi’s Christmas Angels
   author: Julie Dodd
-  no_gallery: true
 greensboro_angel_tree_program:
   title: Greensboro Angel Tree Program
   author: Jonathan Doll & Joey Wysosky
-  no_gallery: true
 greensboro_holiday_party:
   title: Greensboro Holiday Party
   author: Zach Goins
-  no_gallery: false
+  no_gallery: true
 project_spotlight_smith_nephew:
   title: Project Spotlight - Smith & Nephew
   author: John Martin
-  no_gallery: true
 meet_the_consultants:
   title: Meet the Consultants
   author: Tim Ruckriegel
-  no_gallery: true
 comic:
   title: Comic
   author: Tim Ruckriegel
-  no_gallery: true
 announcements:
   title: Announcements
-  author: Jessica Marshall
-  no_gallery: true
-guess_who:
-  title: Guess Who
+  author: Tim Ruckriegel
+guess_who_challenge:
+  title: Guess Who Challenge
   author: Alissa Taylor
+secret_guess_who_information:
+  title: Guess Who
   no_gallery: true
+  hidden: true
+  page_name: secret_guess_who_information
 birthdays_anniversaries:
   title: Birthdays and Anniversaries
   no_gallery: true
