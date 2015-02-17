@@ -17,7 +17,7 @@
   });
 
   $("#o").on('click', function() {
-    return window.location.href = '../articles/you_found_me.html';
+    return window.location.href = '../articles/secret_guess_who_information.html';
   });
 
   $(document).ready(function() {

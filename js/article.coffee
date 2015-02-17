@@ -9,6 +9,6 @@ $container.imagesLoaded ->
     itemSelector: 'img'
   })
 $("#o").on 'click', ->
-  window.location.href = '../articles/you_found_me.html'
+  window.location.href = '../articles/secret_guess_who_information.html'
 $(document).ready ->
   $('[data-toggle=tooltip]').tooltip()
