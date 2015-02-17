@@ -24,6 +24,7 @@ kennesaw_thanksgiving_potluck:
 greensboro_thanksgiving_potluck:
   title: Greensboro Thanksgiving Potluck
   author: Kevin Munro
+  no_gallery: true
 orasi_s_christmas_angels:
   title: Orasi’s Christmas Angels
   author: Julie Dodd

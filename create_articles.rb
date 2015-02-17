@@ -27,7 +27,7 @@ contents.each do |l|
   l.chomp!
   attributes = l.strip.split("|||")
   title, author, no_gallery, hidden, page_name = attributes
-  p attributes
+
   # create filename based on the the title or page_name
   if page_name.nil?
     filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
