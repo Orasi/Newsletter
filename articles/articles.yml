@@ -1,59 +1,27 @@
-the_history_of_friday_the_13th:
-  title: The History of Friday the 13th
-  author: Julie Dodd
-atlanta_christmas_party:
-  title: Atlanta Christmas Party
-  author: Julie Dodd
-  no_gallery: true
-early_spring_gardening:
-  title: Early Spring Gardening
-  author: Zach Goins
-employee_spotlight_kevin_hedgecock:
-  title: Employee Spotlight - Kevin Hedgecock
-  author: Andy Williams
-buffalo_chicken_crescent_ring:
-  title: Buffalo Chicken Crescent Ring
-  author: Julia Walser
-atlanta_greensboro_events:
-  title: Atlanta/Greensboro events
-  author: Jessica Marshall
-kennesaw_thanksgiving_potluck:
-  title: Kennesaw Thanksgiving Potluck
-  author: Julie Dodd
-greensboro_thanksgiving_potluck:
-  title: Greensboro Thanksgiving Potluck
-  author: Kevin Munro
-  no_gallery: true
-orasi_s_christmas_angels:
-  title: Orasi’s Christmas Angels
-  author: Julie Dodd
-greensboro_angel_tree_program:
-  title: Greensboro Angel Tree Program
-  author: Jonathan Doll & Joey Wysosky
-greensboro_holiday_party:
-  title: Greensboro Holiday Party
-  author: Zach Goins
-  no_gallery: true
-project_spotlight_smith_nephew:
-  title: Project Spotlight - Smith & Nephew
-  author: John Martin
-meet_the_consultants:
-  title: Meet the Consultants
-  author: Tim Ruckriegel
-comic:
-  title: Comic
-  author: Tim Ruckriegel
-announcements:
-  title: Announcements
-  author: Tim Ruckriegel
-guess_who_challenge:
-  title: Guess Who Challenge
+employee_spotlight_placeholder:
+  title: Employee Spotlight_placeholder
+recipe_placeholder:
+  title: Recipe_placeholder
+atlanta_greensboro_events_placeholder:
+  title: Atlanta/Greensboro events_placeholder
+project_spotlight_placeholder:
+  title: Project Spotlight_placeholder
+meet_the_consultants_placeholder:
+  title: Meet the Consultants_placeholder
+comic_placeholder:
+  title: Comic_placeholder
+announcements_placeholder:
+  title: Announcements_placeholder
+guess_who_challenge_placeholder:
+  title: Guess Who Challenge_placeholder
   author: Alissa Taylor
 secret_guess_who_information:
-  title: Guess Who
+  title: Guess Who_placeholder
   no_gallery: true
   hidden: true
   page_name: secret_guess_who_information
+archive:
+  title: Archive
 birthdays_anniversaries:
   title: Birthdays and Anniversaries
   no_gallery: true

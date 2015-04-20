@@ -17,7 +17,7 @@ set :branch, branch_to_deploy
 
 # Set the deploy folder to be the location of the next version while in development.
 # This will need to be updated whenever a new issue needs to be deployed
-folder_to_deploy = '/var/www/rural-reader/2015/q3'
+folder_to_deploy = '/var/www/rural-reader/2015/q4'
 set :deploy_to, folder_to_deploy
 
 # Set the name and location of the symlink
