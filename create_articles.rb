@@ -11,6 +11,10 @@ def read_file(file)
   data
 end
 
+def secret_title
+  (0..25).map { [*0..9,*'a'..'z',*'A'..'Z',].sample }.join
+end
+
 # archive existing article.yml
 if File.exist?(articles_file)
   renamed = "archived/articles_#{Time.now.strftime('%Y%m%d_%H%M%S')}.yml"
@@ -31,6 +35,9 @@ contents.each do |l|
   # create filename based on the the title or page_name
   if page_name.nil?
     filename = title.downcase.gsub(/[^0-9a-z]+/, '_')
+  elsif page_name == 'secret_guess_who_information'
+    page_name = secret_title
+    filename = page_name
   else
     filename = page_name.downcase.gsub(/[^0-9a-z]+/, '_')
   end
@@ -64,9 +71,6 @@ contents.each do |l|
   unless Dir.exist?("img/#{filename}")
     system("mkdir img/#{filename}")
   end
-
-
-
 end
 
 # add the birthdays article
