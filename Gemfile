@@ -10,3 +10,4 @@ gem 'capistrano'
 gem 'bourbon'
 gem 'pry'
 gem 'pry-debugger'
+gem "airbrussh", :require => false
