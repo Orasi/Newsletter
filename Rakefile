@@ -8,10 +8,12 @@ require 'pry-byebug'
 require "/home/ubuntu/workspace/config/library.rb"
 include ActiveSupport::Inflector
 
+create_articles
+
 task default: :build
 
 desc 'Build the website'
-task build: %i(create_articles clean landing_page articles stylesheets minify_javascripts images report)
+task build: %i(clean landing_page articles stylesheets minify_javascripts images report)
 
 stylesheets = Rake::FileList['css/*.sass']
 javascripts = Rake::FileList['js/*.coffee', 'js/*.js']
