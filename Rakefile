@@ -5,7 +5,7 @@ require 'yaml'
 require 'active_support/core_ext'
 require 'pry'
 require 'pry-byebug'
-require "/home/ubuntu/workspace/config/library.rb"
+require_relative 'config/library.rb'
 include ActiveSupport::Inflector
 
 create_articles
