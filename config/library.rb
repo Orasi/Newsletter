@@ -32,6 +32,7 @@ def create_articles
   # event_format = "STUPID EVENT FORMAT ISSUES"
 
   # archive existing article.yml
+  Dir.mkdir('archived') unless Dir.exist?('archived')
   if File.exist?(articles_file)
     renamed = "archived/articles_#{Time.now.strftime('%Y%m%d_%H%M%S')}.yml"
     puts "\n----\nRenaming #{articles_file} to #{renamed} and moving it to 'archived'\n----"
@@ -108,7 +109,6 @@ def create_articles
   # archive any article content files that weren't in the list, except for the birthdays article
   # if the birthdays haml file gets manually deleted, you'll need to recreate it from the git source or rake won't work
   puts "\n----\nArchiving unlisted article resources\n----"
-  Dir.mkdir('archived') unless Dir.exist?('archived')
   Dir.glob('articles/content/*.haml').each do |f|
     unless articles.include?(File.basename(f)) || File.basename(f) == '_birthdays_anniversaries_article.html.haml'
       puts "File [#{File.basename(f)}] isn't in the article list, so it is being archived."
