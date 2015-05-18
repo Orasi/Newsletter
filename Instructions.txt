@@ -12,6 +12,8 @@ Development flow:
 	c. run the 'rake' command to build a new, local version of the site
 4. Build the new edition
 	a. adjust/add content of the haml article files in 'articles/content'
+		i. add images for the article to the corresponding folder in 'img'
+		ii. the image the article will use for the frontpage of the newsletter should be labeled 'opening.jpg'
 	b. run the 'rake' command again to update your local version of the site with the changes
 	c. preview the new version to verify the changes
 	c. if the changes are acceptable, commit them to git
