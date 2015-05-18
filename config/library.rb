@@ -84,7 +84,7 @@ def create_articles
           markdown = File.read(markdown_file)
           kramdown = Kramdown::Document.new(markdown).to_html
           haml = Html2haml::HTML.new(kramdown).render
-          f.puts haml
+          f.puts haml.gsub('%p', '%p.article-text')
         elsif filename.include?('event')
           f.puts "//-----USE THE FORMAT BELOW TO CREATE EACH EVENT ITEM-----"
           f.puts event_format
