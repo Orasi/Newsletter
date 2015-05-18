@@ -7,6 +7,8 @@ employee_spotlight_a_year_in_review:
 orasi_award_winners:
   title: Orasi Award Winners
   author: Andrew Williams
+archive:
+  title: Archive
 birthdays_anniversaries:
   title: Birthdays and Anniversaries
   no_gallery: true
