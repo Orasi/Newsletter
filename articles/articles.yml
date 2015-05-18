@@ -1,27 +1,6 @@
-employee_spotlight_placeholder:
-  title: Employee Spotlight_placeholder
-recipe_placeholder:
-  title: Recipe_placeholder
-atlanta_greensboro_events_placeholder:
-  title: Atlanta/Greensboro events_placeholder
-project_spotlight_placeholder:
-  title: Project Spotlight_placeholder
-meet_the_consultants_placeholder:
-  title: Meet the Consultants_placeholder
-comic_placeholder:
-  title: Comic_placeholder
-announcements_placeholder:
-  title: Announcements_placeholder
-guess_who_challenge_placeholder:
-  title: Guess Who Challenge_placeholder
+guess_who_a_year_in_review:
+  title: Guess Who - A Year In Review
   author: Alissa Taylor
-secret_guess_who_information:
-  title: Guess Who_placeholder
-  no_gallery: true
-  hidden: true
-  page_name: secret_guess_who_information
-archive:
-  title: Archive
 birthdays_anniversaries:
   title: Birthdays and Anniversaries
   no_gallery: true
