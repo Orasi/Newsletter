@@ -4,6 +4,10 @@ guess_who_a_year_in_review:
 employee_spotlight_a_year_in_review:
   title: Employee Spotlight - A Year In Review
   author: John Martin
+baby_showers:
+  title: Baby Showers
+  author: Jessica Marshall
+  no_gallery: true
 a_big_thank_you_:
   title: A Big Thank You!
   author: Alissa Taylor
