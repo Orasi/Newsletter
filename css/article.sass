@@ -104,6 +104,7 @@ a#home-link
     float: left
   &.right
     float: right
+// tag used for hidden link
 #o
   cursor: text
   color: black
@@ -127,14 +128,6 @@ a#home-link
   font-size: 1.5em
 .border
   border: 1px solid black
-.member-table
-  width: 80%
-  margin-left: 10%
-  margin-right: 10%
-  text-align: center
-  column-width: fixed
-  font-size: 1.1em
-  font-weight: bold
 .quote
   font-style: oblique
   font-weight: bold
@@ -142,7 +135,7 @@ a#home-link
   color: green
 .list-item
   text-align: left
-  font-size: 20px
+  font-size: 18px
 .l
   text-align: left
 .r
@@ -173,6 +166,12 @@ ol
   list-style-type: none
 .inline
   display: inline-block
+// ============================================
+// styles below this line will vary from edition to edition and can usually be removed for each new edition without damanging the layout
+.eighty
+  margin-left: auto
+  margin-right: auto
+  width: 80%
 .award-winners
   width: 70%
   margin-left: auto
@@ -181,7 +180,11 @@ ol
     width: 100%
     td
       width: 50%
-.eighty
-  margin-left: auto
-  margin-right: auto
+.member-table
   width: 80%
+  margin-left: 10%
+  margin-right: 10%
+  text-align: center
+  column-width: fixed
+  font-size: 1.1em
+  font-weight: bold
