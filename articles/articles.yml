@@ -7,6 +7,7 @@ employee_spotlight_a_year_in_review:
 charity_initiative:
   title: Charity Initiative
   author: Zachary Goins
+  no_gallery: true
 baby_showers:
   title: Baby Showers
   author: Jessica Marshall
