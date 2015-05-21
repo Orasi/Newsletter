@@ -9,7 +9,8 @@ Development flow:
 		ii. this list should be in the order the articles should appear
 		iii. put a '#' at the beginning of any article line that you dont' want to process yet(useful for creating placeholders)
 	b. place any markdown files in 'content/markdown'. These file names should exactly match the article titles they are associated with.
-	c. run the 'rake' command to build a new, local version of the site
+	c. Update the Google Analytics ID in template.html
+	d. run the 'rake' command to build a new, local version of the site
 4. Build the new edition
 	a. adjust/add content of the haml article files in 'articles/content'
 		i. add images for the article to the corresponding folder in 'img'
