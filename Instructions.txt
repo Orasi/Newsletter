@@ -64,6 +64,7 @@ bundle exec cap production deploy
 
 make changes to index page in:
 index.html.erb
+This is where you need to update the edition version and the release date
 
 bylines are handled in _grid_layout.html.haml
 
