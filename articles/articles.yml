@@ -1,59 +1,32 @@
-the_history_of_friday_the_13th:
-  title: The History of Friday the 13th
-  author: Julie Dodd
-atlanta_christmas_party:
-  title: Atlanta Christmas Party
-  author: Julie Dodd
-  no_gallery: true
-early_spring_gardening:
-  title: Early Spring Gardening
-  author: Zach Goins
-employee_spotlight_kevin_hedgecock:
-  title: Employee Spotlight - Kevin Hedgecock
-  author: Andy Williams
-buffalo_chicken_crescent_ring:
-  title: Buffalo Chicken Crescent Ring
-  author: Julia Walser
-atlanta_greensboro_events:
-  title: Atlanta/Greensboro events
-  author: Jessica Marshall
-kennesaw_thanksgiving_potluck:
-  title: Kennesaw Thanksgiving Potluck
-  author: Julie Dodd
-greensboro_thanksgiving_potluck:
-  title: Greensboro Thanksgiving Potluck
-  author: Kevin Munro
-  no_gallery: true
-orasi_s_christmas_angels:
-  title: Orasi’s Christmas Angels
-  author: Julie Dodd
-greensboro_angel_tree_program:
-  title: Greensboro Angel Tree Program
-  author: Jonathan Doll & Joey Wysosky
-greensboro_holiday_party:
-  title: Greensboro Holiday Party
-  author: Zach Goins
-  no_gallery: true
-project_spotlight_smith_nephew:
-  title: Project Spotlight - Smith & Nephew
+guess_who_a_year_in_review:
+  title: Guess Who - A Year In Review
+  author: Alissa Taylor
+employee_spotlight_a_year_in_review:
+  title: Employee Spotlight - A Year In Review
   author: John Martin
+charity_initiative:
+  title: Charity Initiative
+  author: Zachary Goins
+  no_gallery: true
+baby_showers:
+  title: Baby Showers
+  author: Jessica Marshall
+  no_gallery: true
+a_big_thank_you_:
+  title: A Big Thank You!
+  author: Alissa Taylor
+halloween:
+  title: Halloween
+  author: Lily Powell
+  no_gallery: true
+orasi_award_winners:
+  title: Orasi Award Winners
+  author: Andrew Williams
 meet_the_consultants:
   title: Meet the Consultants
   author: Tim Ruckriegel
-comic:
-  title: Comic
-  author: Tim Ruckriegel
-announcements:
-  title: Announcements
-  author: Tim Ruckriegel
-guess_who_challenge:
-  title: Guess Who Challenge
-  author: Alissa Taylor
-secret_guess_who_information:
-  title: Guess Who
-  no_gallery: true
-  hidden: true
-  page_name: secret_guess_who_information
+archive:
+  title: Archive
 birthdays_anniversaries:
   title: Birthdays and Anniversaries
   no_gallery: true

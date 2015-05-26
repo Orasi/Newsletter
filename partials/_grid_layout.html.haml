@@ -31,7 +31,7 @@
           - elsif File.exist?("img/#{folder}/opening.png")
             - image = "img/#{folder}/opening.png"
           - else
-            - image = "http://placehold.it/640x480.jpg/357bb9"            
+            - image = "http://placehold.it/640x480.jpg/357bb9"
           // - image = File.exist?("img/#{folder}/opening.jpg") ? "img/#{folder}/opening.jpg" : "http://placehold.it/640x480.jpg/357bb9"
           %img{src: image, width: '100%'}
             %h3= value['title']
@@ -40,7 +40,3 @@
       %h2
         Website by
         %a{href: 'mailto:damien.storm@orasi.com'} Damien Storm
-    %li
-      %a{href: "http://ruraldirectory.orasi.com/prev_rural_reader"}
-        %img{src: "img/header-logo.png"}
-          %h3= "Previous Rural Reader"

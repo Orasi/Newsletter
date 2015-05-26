@@ -1,0 +1,3 @@
+Please join us in giving tremendous thanks to the relentless hard work and dedication put forth by The Newsletter Committee and all volunteers that facilitated in the production of The Rural Reader. The team and all volunteers have been instrumental in helping with brainstorming, layout design, and content delivery, aiding in our goal to bring you a publication rich in intriguing departmental news and activities.
+
+Let's take a moment to reflect with this edition of "A Year in Review - FY15".  Once again, a big thank you to the Newsletter Committee and all volunteers for all of your hard work!

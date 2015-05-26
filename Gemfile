@@ -10,3 +10,7 @@ gem 'capistrano'
 gem 'bourbon'
 gem 'pry'
 gem 'pry-debugger'
+gem 'pry-byebug'
+gem 'airbrussh', require: false
+gem 'kramdown'
+gem 'html2haml'

@@ -3,9 +3,12 @@ require 'bundler/setup'
 Bundler.require
 require 'yaml'
 require 'active_support/core_ext'
-# binding.pry
-
+require 'pry'
+require 'pry-byebug'
+require_relative 'config/library.rb'
 include ActiveSupport::Inflector
+
+create_articles
 
 task default: :build
 
@@ -44,26 +47,7 @@ task :images do
   end
 end
 
-def get_next_article(articles_yaml, index)
-  next_index = index == articles_yaml.keys.size - 1 ? 0 : index + 1
-  return articles_yaml.keys[next_index] unless articles_yaml[articles_yaml.keys[next_index]]['hidden'] == true
-  get_next_article(articles_yaml, next_index)
-end
-
-def get_prev_article(articles_yaml, index)
-  prev_index = index == 0 ? articles_yaml.keys.size - 1 : index - 1
-  return articles_yaml.keys[prev_index] unless articles_yaml[articles_yaml.keys[prev_index]]['hidden'] == true
-  get_prev_article(articles_yaml, prev_index)
-end
-
-def get_avatar(name)
-  Dir['img/avatars/*.jpg'].each do |image_file|
-    return image_file if File.basename(image_file, '.jpg') == name
-  end
-  Kernel.puts "Could not find matching avatar for [#{name}]"
-  File.path('/img/avatars/placeholder.jpg')
-end
-
+puts "starting articles_yaml stuff"
 articles_yaml = YAML.load_file('articles/articles.yml')
 articles_yaml.keys.each_with_index do |article, index|
   file "articles/#{article}.html" => [Dir["articles/content/_#{article}_article.html*"].first, 'articles/template.html.haml', 'articles/articles.yml'] do |t|
@@ -73,7 +57,7 @@ articles_yaml.keys.each_with_index do |article, index|
     article_locals['next_article'] = get_next_article(articles_yaml, index)
     article_locals['prev_article'] = get_prev_article(articles_yaml, index)
     article_name = article_locals['page_name'].present? ? "articles/#{article_locals['page_name']}.html" : t.name
-    puts "Writing #{article_name}"
+    puts 'Adding nav buttons'.center(25) + " Writing #{article_name}"
     File.open(article_name, 'w') do |file|
       file.write Tilt.new(File.expand_path('../articles/template.html.haml', __FILE__)).render(Object.new, article_locals)
     end
@@ -86,14 +70,14 @@ task articles: articles_yaml.keys.map { |article| "articles/#{article}.html" }
 file 'index.html' => %w(index.html.erb
                         partials/_grid_layout.html.haml
                         articles/articles.yml) do |t|
-  puts "Writing #{t.name}"
+  puts 'File 1'.center(25) + "Writing #{t.name}"
   File.open(t.name, 'w') do |f|
     f.write Tilt.new('index.html.erb').render
   end
 end
 
 rule '.js' => '.coffee' do |t|
-  puts "Writing #{t.name}"
+  puts 'Rule 1'.center(25) + "Writing #{t.name}"
   File.open(t.name, 'w') do |f|
     f.write CoffeeScript.compile File.read(t.source)
   end
@@ -104,7 +88,7 @@ rule '.css' => '.sass' do |t|
 end
 
 rule '.min' => '.js' do |t|
-  puts "Writing #{t.name}.js"
+  puts 'Rule 2'.center(25) + "Writing #{t.name}.js"
   File.open("#{t.name}.js", 'w') do |f|
     f.write Uglifier.new(output: { comments: :none }).compile(File.read(t.source))
   end
@@ -131,4 +115,8 @@ task :clean do
       File.rename(f,  File.path(f).sub(File.basename(f), '') + File.basename(f).sub(File.extname(f), '') + '.jpg')
     end
   end
+end
+
+task :create_articles do
+  create_articles
 end

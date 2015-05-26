@@ -58,6 +58,10 @@ $orasi-blue: #357BB9
   width: 50%
   img
     margin: 20px auto
+.centered
+  // display: block
+  margin-left: auto
+  margin-right: auto
 .fixed-floating-left
   position: fixed
   left: 12px
@@ -100,6 +104,7 @@ a#home-link
     float: left
   &.right
     float: right
+// tag used for hidden link
 #o
   cursor: text
   color: black
@@ -123,14 +128,6 @@ a#home-link
   font-size: 1.5em
 .border
   border: 1px solid black
-.member-table
-  width: 80%
-  margin-left: 10%
-  margin-right: 10%
-  text-align: center
-  column-width: fixed
-  font-size: 1.1em
-  font-weight: bold
 .quote
   font-style: oblique
   font-weight: bold
@@ -138,7 +135,7 @@ a#home-link
   color: green
 .list-item
   text-align: left
-  font-size: 20px
+  font-size: 18px
 .l
   text-align: left
 .r
@@ -155,6 +152,8 @@ a#home-link
   text-decoration: underline
 .blue
   color: blue
+.orasi-blue
+  color: $orasi-blue
 ul
   text-align: left
 ol
@@ -165,3 +164,29 @@ ol
   -moz-columns: 2
 .no-bullets
   list-style-type: none
+.inline
+  display: inline-block
+// ============================================
+// styles below this line will vary from edition to edition and can usually be removed for each new edition without damanging the layout
+.eighty
+  margin-left: auto
+  margin-right: auto
+  width: 80%
+.award-winners
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+  tr
+    width: 100%
+    td
+      width: 50%
+.member-table
+  width: 80%
+  margin-left: 10%
+  margin-right: 10%
+  text-align: center
+  column-width: fixed
+  font-size: 1.1em
+  font-weight: bold
+.fifteenpx
+  font-size: 18px

@@ -3,17 +3,22 @@ Development flow:
 	a. your computer
 	b. a new instance in Cloud9
 2. Create a new branch in git for development of the new edition
-3. Create the website structure and fill in content
+3. Create the website structure
 	a. replace the contents of 'article_list' with the current list of articles
-		i. the list should be in the format 'Article Title[tab]Article Author'
+		i. the list should be in the format 'Article Title|||Article Author'
 		ii. this list should be in the order the articles should appear
-	b. type 'ruby create_articles.rb' to run the script that creates all of the articles listed in 'article_list'
-	c. fill all of the newly created article files in 'articles/content' with their respective content
+		iii. put a '#' at the beginning of any article line that you dont' want to process yet(useful for creating placeholders)
+	b. place any markdown files in 'content/markdown'. These file names should exactly match the article titles they are associated with.
+	c. Update the Google Analytics ID in template.html.haml
+	d. run the 'rake' command to build a new, local version of the site
 4. Build the new edition
-	a. run the 'rake' command to build a new, local version of the site
-	b. preview the new version to verify the changes
+	a. adjust/add content of the haml article files in 'articles/content'
+		i. add images for the article to the corresponding folder in 'img'
+		ii. the image the article will use for the frontpage of the newsletter should be labeled 'opening.jpg'
+	b. run the 'rake' command again to update your local version of the site with the changes
+	c. preview the new version to verify the changes
 	c. if the changes are acceptable, commit them to git
-	d. repeat until website is done
+	d. repeat until website is complete
 5. Publish development version to the staging location of the website via Capistrano
 	a. follow the instructions at the top of '../config/deploy/staging.rb'
 	b. make any necessary changes
@@ -48,14 +53,6 @@ ToDo:
 -create guide for website design so others can develop
 -define terms and concepts
 
-Newsletter goes out on 02/13/15
-Build out documentation as I learn it
-wishlist:
-    gallery for pictures that allows people to zoom/browse
-    claymation thing with the logo is too slow
-    archive page for accessing past issues
-    add last updated date to bottom of index, should reflect last time page was compiled
-
 to access Atlanta server:
 ssh damien@69.61.108.36
 
@@ -67,6 +64,7 @@ bundle exec cap production deploy
 
 make changes to index page in:
 index.html.erb
+This is where you need to update the edition version and the release date
 
 bylines are handled in _grid_layout.html.haml
 
@@ -80,5 +78,10 @@ ToDo:
 read up on Puppet(used to administrate a Linux box remotely)
 	http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
 
-  .image-holder
-    %img{src: '../img/IMAGE_FOLDER/IMAGE_NAME.jpg'}
+
+Links that target a previous edition should be made to open in a new window to avoid confusion with the home buttons in the old article taking the user back to the home page of the archive edition instead of the one they were reading.
+To do that, add the following onclick parameter to the link:
+onclick:"window.open('REPLACE_WITH_LINK_TARGET', 'newwindow', 'width=800, height=800'); return false;"
+
+Here's an example:
+<a href='http://ruraldirectory.orasi.com/rural_reader_archive/2015-q2/articles/charity.html', onclick="window.open('http://ruraldirectory.orasi.com/rural_reader_archive/2015-q2/articles/charity.html', 'newwindow', 'width=800, height=800'); return false;">Pie a Manager</a>
