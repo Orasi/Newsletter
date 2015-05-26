@@ -25,7 +25,7 @@ Development flow:
 	c. commit the changes and repeat until website is finalized
 6. Publish finalized version to the production location of the website via Capistrano
 	a. merge the development branch into the master branch on git
-	b. follow the instructions at the top of '../config/deploy/staging.rb'
+	b. follow the instructions at the top of '../config/deploy/production.rb'
 	c. verify the live site is correct
 	d. celebrate!
 7. Delete unnecessary data in articles/archive
