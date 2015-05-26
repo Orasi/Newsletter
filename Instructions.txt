@@ -76,3 +76,11 @@ articles/articles.yml
 ToDo:
 read up on Puppet(used to administrate a Linux box remotely)
 	http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
+
+
+Links that target a previous edition should be made to open in a new window to avoid confusion with the home buttons in the old article taking the user back to the home page of the archive edition instead of the one they were reading.
+To do that, add the following onclick parameter to the link:
+onclick:"window.open('REPLACE_WITH_LINK_TARGET', 'newwindow', 'width=800, height=800'); return false;"
+
+Here's an example:
+<a href='http://ruraldirectory.orasi.com/rural_reader_archive/2015-q2/articles/charity.html', onclick="window.open('http://ruraldirectory.orasi.com/rural_reader_archive/2015-q2/articles/charity.html', 'newwindow', 'width=800, height=800'); return false;">Pie a Manager</a>
