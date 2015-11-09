@@ -37,7 +37,7 @@ To get access, talk to Matt Watson or Perry Thomas.
 
 Project structure:
 /articles/articles.yml	|	this file contains a list of all the article titles with author information and the various article flags: no_gallery, hidden, page_name. Rake uses this to generate all of the article html files.
-/articles/content		|	this folder contains the .haml content file for each article. Each article must be listed in /article/articles.yml or it won't be processed by Rake.
+/articles/content	|	this folder contains the .haml content file for each article. Each article must be listed in /article/articles.yml or it won't be processed by Rake.
 
 Terms & Concepts:
 Git
@@ -48,13 +48,8 @@ Staging vs. Production
 Haml
 Sass
 
-
-ToDo:
--create guide for website design so others can develop
--define terms and concepts
-
-to access Atlanta server:
-ssh damien@69.61.108.36
+to access server:
+ssh username@69.61.108.36
 
 to deploy to stage with your current branch:
 bundle exec cap staging deploy
@@ -68,16 +63,11 @@ This is where you need to update the edition version and the release date
 
 bylines are handled in _grid_layout.html.haml
 
-each article should have a haml file with the article contents in articles/content
-articles/articles.yml
+each article should have a haml file with the article's contents in articles/content
+articles/articles.yml:
 	controls the order of the articles
 	controls what articles are visible on the page
 	controls what articles get built
-
-ToDo:
-read up on Puppet(used to administrate a Linux box remotely)
-	http://www.linux.com/learn/tutorials/325201-introduction-to-puppet-streamlined-system-configuration
-
 
 Links that target a previous edition should be made to open in a new window to avoid confusion with the home buttons in the old article taking the user back to the home page of the archive edition instead of the one they were reading.
 To do that, add the following onclick parameter to the link:
