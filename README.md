@@ -1,3 +1,3 @@
 # Rural Reader Newsletter
 
-Start with index.html or clay.html.  To build everything simple type 'rake'.
+The Rural Reader is an interactive newsletter website built with Ruby using HAML and SASS, and deployed via Capistrano.
